@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOportec — Soluciones TI integrales para empresas y hogares en Surco, Barranco, San Isidro, Miraflores y San Luis. Soporte técnico, cableado estructurado, redes y más.">
+    <title>SOportec — IT Support & Tecnología</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- Font Awesome 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#top">
+            <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                id="navToggler">
+            <i class="fa fa-bars" id="navTogglerIcon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#top">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-us">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="atencion-tickets.html">Soporte por Tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
+                <li class="nav-item ml-2">
+                    <a href="#cotizar" class="btn-nav-cta">Solicitar Asistencia</a>
+                </li>
+                <li class="nav-item ml-2 d-flex align-items-center">
+                    <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+                        <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</section>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="top" class="hero-section">
+    <!-- Fondo animado de partículas -->
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+    <!-- Grid overlay decorativo -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <!-- Orbes de color de fondo -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center hero-text-block">
+                <!-- Chip de categoría -->
+                <div class="hero-chip fade-in-up" style="animation-delay:0.1s">
+                    <span class="chip-dot"></span>
+                    Empresa · Hogar · Lima
+                </div>
+
+                <h1 class="hero-title fade-in-up" style="animation-delay:0.25s">
+                    Soluciones TI <span class="gradient-text">Integrales</span><br>
+                    para tu Empresa y Hogar
+                </h1>
+
+                <p class="hero-subtitle mx-auto fade-in-up" style="animation-delay:0.4s">
+                    Soporte técnico profesional, cableado estructurado, redes y más.
+                    Atendemos en <strong>Surco, Barranco, San Isidro, Miraflores y San Luis</strong>.
+                </p>
+
+                <div class="hero-actions justify-content-center fade-in-up" style="animation-delay:0.55s">
+                    <a href="#services" class="btn-tech btn-tech-filled mr-3">
+                        <i class="fa fa-th-large"></i> Ver Servicios
+                    </a>
+                    <a href="#cotizar" class="btn-tech btn-tech-outline-white">
+                        <i class="fa fa-envelope"></i> Cotizar Ahora
+                    </a>
+                </div>
+
+                <!-- Métricas rápidas -->
+                <div class="hero-stats justify-content-center fade-in-up" style="animation-delay:0.65s">
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">9+</span>
+                        <span class="hero-stat-label">Servicios TI</span>
+                    </div>
+                    <div class="hero-stat-divider" aria-hidden="true"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">B2B</span>
+                        <span class="hero-stat-label">y B2C</span>
+                    </div>
+                    <div class="hero-stat-divider" aria-hidden="true"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">5</span>
+                        <span class="hero-stat-label">Distritos</span>
+                    </div>
+                    <div class="hero-stat-divider" aria-hidden="true"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num">24/7</span>
+                        <span class="hero-stat-label">Disponibilidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrusel horizontal de imágenes TI -->
+        <div class="hero-banner-wrap fade-in-up" style="animation-delay:0.8s">
+
+            <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
+
+                <div class="carousel-inner">
+                    <!-- Slide 1: Equipo en oficina -->
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1400&q=85"
+                             alt="Equipo de profesionales TI en oficina moderna"
+                             class="hero-banner-img">
+                        <div class="hero-banner-overlay" aria-hidden="true"></div>
+                        <div class="carousel-caption-tech">
+                            <span>Soporte Empresarial</span>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Técnico en soporte remoto -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1400&q=85"
+                             alt="Técnico brindando soporte remoto con múltiples pantallas"
+                             class="hero-banner-img">
+                        <div class="hero-banner-overlay" aria-hidden="true"></div>
+                        <div class="carousel-caption-tech">
+                            <span>Soporte Remoto 24/7</span>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Cableado estructurado / servidores -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=85"
+                             alt="Rack de servidores y cableado estructurado profesional"
+                             class="hero-banner-img">
+                        <div class="hero-banner-overlay" aria-hidden="true"></div>
+                        <div class="carousel-caption-tech">
+                            <span>Infraestructura & Servidores</span>
+                        </div>
+                    </div>
+                    <!-- Slide 4: Redes y conectividad -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1400&q=85"
+                             alt="Gabinete de red con switches y cableado organizado"
+                             class="hero-banner-img">
+                        <div class="hero-banner-overlay" aria-hidden="true"></div>
+                        <div class="carousel-caption-tech">
+                            <span>Redes & Conectividad</span>
+                        </div>
+                    </div>
+                    <!-- Slide 5: Soporte técnico presencial -->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?w=1400&q=85"
+                             alt="Técnico realizando soporte presencial en empresa"
+                             class="hero-banner-img">
+                        <div class="hero-banner-overlay" aria-hidden="true"></div>
+                        <div class="carousel-caption-tech">
+                            <span>Visitas Presenciales</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6: Microsoft Intune -->
+                    <div class="carousel-item carousel-item-intune">
+                        <div class="intune-slide">
+                            <div class="intune-bg" aria-hidden="true"></div>
+                            <div class="intune-content">
+                            <div class="intune-logo-wrap">
+                                <!-- Logo Microsoft (4 cuadros) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" class="intune-ms-icon" aria-label="Microsoft">
+                                    <path fill="#f35325" d="M1 1h10v10H1z"/>
+                                    <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                                    <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                                    <path fill="#ffba08" d="M12 12h10v10H12z"/>
+                                </svg>
+                                <!-- Nombre del producto tipografía -->
+                                <div class="intune-product-name">
+                                    <span class="intune-ms-text">Microsoft</span>
+                                    <span class="intune-product-text">Intune</span>
+                                </div>
+                            </div>
+                                <div class="intune-text">
+                                    <h3 class="intune-title">Gestión Empresarial con<br><strong>Microsoft Intune</strong></h3>
+                                    <p class="intune-desc">Administración centralizada de dispositivos, políticas de seguridad y acceso condicional para toda tu organización.</p>
+                                    <div class="intune-tags">
+                                        <span><i class="fa fa-check"></i> MDM & MAM</span>
+                                        <span><i class="fa fa-check"></i> Active Directory</span>
+                                        <span><i class="fa fa-check"></i> Azure AD</span>
+                                        <span><i class="fa fa-check"></i> Conditional Access</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption-tech">
+                            <span>Microsoft Intune & Azure AD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <a class="carousel-control-prev hero-carousel-ctrl" href="#heroCarousel" role="button" data-slide="prev">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next hero-carousel-ctrl" href="#heroCarousel" role="button" data-slide="next">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+
+            </div>
+
+            <!-- Indicadores externos (debajo del carrusel) -->
+            <ol class="carousel-indicators hero-carousel-indicators" id="heroCarouselIndicators">
+                <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#heroCarousel" data-slide-to="1"></li>
+                <li data-target="#heroCarousel" data-slide-to="2"></li>
+                <li data-target="#heroCarousel" data-slide-to="3"></li>
+                <li data-target="#heroCarousel" data-slide-to="4"></li>
+                <li data-target="#heroCarousel" data-slide-to="5"></li>
+            </ol>
+
+            <!-- Chips flotantes -->
+            <div class="float-chip float-chip-1">
+                <i class="fa fa-shield"></i> Seguro
+            </div>
+            <div class="float-chip float-chip-2">
+                <i class="fa fa-bolt"></i> Rápido
+            </div>
+            <div class="float-chip float-chip-3">
+                <i class="fa fa-check-circle"></i> Confiable
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#services" class="hero-scroll-indicator" aria-label="Ver servicios">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+</section>
+
+<!-- ============================================================
+     CLIENTES / LOGOS
+============================================================ -->
+<section class="clients-section">
+    <div class="container">
+        <p class="clients-label">Empresas que confían en SOportec</p>
+        <div class="clients-track">
+            <div class="clients-slide">
+                <img src="Imagenes/images/bcp.png"      alt="BCP"   class="client-logo">
+                <img src="Imagenes/images/bbva.jpg"     alt="BBVA"  class="client-logo">
+                <img src="Imagenes/images/aje.webp"     alt="AJE"   class="client-logo">
+                <img src="Imagenes/images/abb.png"      alt="ABB"   class="client-logo">
+                <img src="Imagenes/images/gmd.jpg"      alt="GMD"   class="client-logo">
+                <img src="Imagenes/images/canvia.png"   alt="Canvia" class="client-logo">
+                <img src="Imagenes/images/inka.png"     alt="Inka"  class="client-logo">
+                <!-- duplicado para loop continuo -->
+                <img src="Imagenes/images/SOportec — IT Support & Tecnología_files/bcp.webp"      alt="BCP"   class="client-logo">
+                <img src="Imagenes/images/bbva.jpg"     alt="BBVA"  class="client-logo">
+                <img src="Imagenes/images/aje.webp"     alt="AJE"   class="client-logo">
+                <img src="Imagenes/images/abb.png"      alt="ABB"   class="client-logo">
+                <img src="Imagenes/images/gmd.jpg"      alt="GMD"   class="client-logo">
+                <img src="Imagenes/images/canvia.png"   alt="Canvia" class="client-logo">
+                <img src="Imagenes/images/inka.png"     alt="Inka"  class="client-logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SERVICIOS
+============================================================ -->
+<section id="services" class="services-section">
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-7">
+                <p class="section-label reveal">Nuestros Servicios</p>
+                <h2 class="section-heading reveal">Todo el soporte TI que necesitas,<br>en un solo lugar</h2>
+                <p class="section-text reveal">
+                    Desde soporte técnico remoto hasta infraestructura de red, cubrimos todas las necesidades
+                    tecnológicas de empresas y hogares con soluciones profesionales y certificadas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tabs B2B / B2C -->
+        <div class="services-tabs reveal">
+            <button class="svc-tab active" data-filter="all">Todos</button>
+            <button class="svc-tab" data-filter="b2b">Empresas (B2B)</button>
+            <button class="svc-tab" data-filter="b2c">Hogares (B2C)</button>
+        </div>
+
+        <!-- Grid de servicios -->
+        <div class="row services-grid" id="servicesGrid">
+
+            <!-- 1 · Soporte Técnico Bilingüe -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b b2c" data-link="soporte-bilingue.html">
+                <div class="glass-card reveal">
+                    <div class="glass-card-icon">
+                        <i class="fa fa-language"></i>
+                    </div>
+                    <div class="glass-card-tag">B2B · B2C</div>
+                    <h4 class="glass-card-title">Soporte Técnico Bilingüe</h4>
+                    <p class="glass-card-text">
+                        Atención especializada en <strong>inglés y español</strong> para empresas con equipos
+                        internacionales o colaboradores extranjeros. Sin barreras de comunicación.
+                    </p>
+                    <div class="glass-card-footer">
+                        <a href="soporte-bilingue.html" class="glass-card-link">
+                            Ver más <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 · Soporte por Tickets -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b" data-link="atencion-tickets.html">
+                <div class="glass-card reveal" style="animation-delay:0.05s">
+                    <div class="glass-card-icon">
+                        <i class="fa fa-ticket"></i>
+                    </div>
+                    <div class="glass-card-tag">B2B</div>
+                    <h4 class="glass-card-title">Soporte por Tickets (Helpdesk)</h4>
+                    <p class="glass-card-text">
+                        Gestión centralizada de incidentes con trazabilidad completa, priorización por SLA
+                        y reportes de gestión. Ninguna solicitud queda sin atender.
+                    </p>
+                    <div class="glass-card-footer">
+                        <a href="atencion-tickets.html" class="glass-card-link">
+                            Ver más <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 · Cableado Estructurado -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b" data-link="cableado-estructurado.html">
+                <div class="glass-card reveal" style="animation-delay:0.1s">
+                    <div class="glass-card-icon">
+                        <img src="Imagenes/images/router.svg" alt="Cableado" class="card-svg-icon">
+                    </div>
+                    <div class="glass-card-tag">B2B</div>
+                    <h4 class="glass-card-title">Cableado Estructurado</h4>
+                    <p class="glass-card-text">
+                        Diseño e implementación de redes físicas con Cat6/Cat6A. Gabinetes organizados,
+                        certificados y documentados para máxima eficiencia operativa.
+                    </p>
+                    <div class="glass-card-footer">
+                        <a href="cableado-estructurado.html" class="glass-card-link">
+                            Ver más <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 · Visitas Presenciales -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b b2c" data-link="visitas-tecnicas.html">
+                <div class="glass-card reveal" style="animation-delay:0.15s">
+                    <div class="glass-card-icon">
+                        <img src="Imagenes/images/person-raised-hand.svg" alt="Visita" class="card-svg-icon">
+                    </div>
+                    <div class="glass-card-tag">B2B · B2C</div>
+                    <h4 class="glass-card-title">Visitas Presenciales</h4>
+                    <p class="glass-card-text">
+                        Soporte técnico in situ en tu oficina o domicilio. Resolvemos problemas complejos
+                        que requieren presencia física, con atención rápida en los 5 distritos cubiertos.
+                    </p>
+                    <div class="glass-card-footer">
+                        <a href="visitas-tecnicas.html" class="glass-card-link">
+                            Ver más <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 · Mantenimiento de Servidores -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b" data-link="servidores.html">
+                <div class="glass-card reveal" style="animation-delay:0.2s">
+                    <div class="glass-card-icon">
+                        <img src="Imagenes/images/hdd-rack.svg" alt="Servidores" class="card-svg-icon">
+                    </div>
+                    <div class="glass-card-tag">B2B</div>
+                    <h4 class="glass-card-title">Mantenimiento de Servidores</h4>
+                    <p class="glass-card-text">
+                        Optimización preventiva y correctiva de infraestructura crítica. Monitoreo,
+                        actualizaciones y gestión de backups para garantizar disponibilidad 24/7.
+                    </p>
+                    <div class="glass-card-footer">
+                        <a href="servidores.html" class="glass-card-link">
+                            Ver más <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 · Dominios / Intune / AD -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b">
+                <div class="glass-card reveal" style="animation-delay:0.25s">
+                    <div class="glass-card-icon">
+                        <i class="fa fa-windows"></i>
+                    </div>
+                    <div class="glass-card-tag">B2B</div>
+                    <h4 class="glass-card-title">Configuración de Dominios</h4>
+                    <p class="glass-card-text">
+                        Administración centralizada con <strong>Microsoft Intune</strong> y
+                        <strong>Active Directory</strong>. Políticas de grupo, MDM y gestión de identidades
+                        corporativas bajo control total.
+                    </p>
+                    <div class="glass-card-footer">
+                        <span class="glass-tag"><i class="fa fa-lock"></i> Intune · AD · GPO</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 · Redes y Conectividad -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b b2c">
+                <div class="glass-card reveal" style="animation-delay:0.3s">
+                    <div class="glass-card-icon">
+                        <i class="fa fa-wifi"></i>
+                    </div>
+                    <div class="glass-card-tag">B2B · B2C</div>
+                    <h4 class="glass-card-title">Redes y Conectividad</h4>
+                    <p class="glass-card-text">
+                        Instalación y configuración de Switches y Access Points de
+                        <strong>Cisco, Aruba y Huawei</strong>. Redes WiFi de alta densidad, VLANs
+                        y segmentación de red corporativa.
+                    </p>
+                    <div class="glass-card-footer">
+                        <span class="glass-tag"><i class="fa fa-sitemap"></i> Cisco · Aruba · Huawei</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 · Suministro de Accesorios -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b b2c">
+                <div class="glass-card reveal" style="animation-delay:0.35s">
+                    <div class="glass-card-icon">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <div class="glass-card-tag">B2B · B2C</div>
+                    <h4 class="glass-card-title">Suministro de Accesorios</h4>
+                    <p class="glass-card-text">
+                        Venta y provisión de periféricos, hardware tecnológico y consumibles. Asesoría
+                        personalizada para elegir los equipos que mejor se adaptan a tu presupuesto
+                        y necesidades.
+                    </p>
+                    <div class="glass-card-footer">
+                        <span class="glass-tag"><i class="fa fa-desktop"></i> Hardware · Periféricos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 · Formateo y Preparación -->
+            <div class="col-lg-4 col-md-6 mb-4 svc-item" data-cat="b2b b2c">
+                <div class="glass-card reveal" style="animation-delay:0.4s">
+                    <div class="glass-card-icon">
+                        <i class="fa fa-laptop"></i>
+                    </div>
+                    <div class="glass-card-tag">B2B · B2C</div>
+                    <h4 class="glass-card-title">Formateo y Preparación de Equipos</h4>
+                    <p class="glass-card-text">
+                        Mantenimiento integral de Laptops y PCs con instalación de
+                        <strong>licencias originales de Windows y Office</strong>.
+                        Equipos listos para trabajar desde el primer día.
+                    </p>
+                    <div class="glass-card-footer">
+                        <span class="glass-tag"><i class="fa fa-check-circle"></i> Licencias originales</span>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /row -->
+    </div>
+</section>
+
+<!-- ============================================================
+     POR QUÉ ELEGIRNOS
+============================================================ -->
+<section id="about-us" class="why-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Columna izquierda: imagen y stats -->
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <div class="why-img-wrap reveal">
+                    <img src="Imagenes/images/infraestrucutra.jpg" alt="Equipo SOportec" class="why-img">
+                    <div class="why-badge why-badge-1">
+                        <i class="fa fa-bolt"></i>
+                        <span><strong>&lt;2h</strong><br>Respuesta</span>
+                    </div>
+                    <div class="why-badge why-badge-2">
+                        <i class="fa fa-map-marker"></i>
+                        <span><strong>5</strong><br>Distritos</span>
+                    </div>
+                </div>
+                <!-- Contador de métricas -->
+                <div class="why-counters reveal">
+                    <div class="why-counter">
+                        <span class="counter-num" data-target="98">0</span><span class="counter-suffix">%</span>
+                        <span class="counter-label">Satisfacción</span>
+                    </div>
+                    <div class="why-counter">
+                        <span class="counter-num" data-target="500">0</span><span class="counter-suffix">+</span>
+                        <span class="counter-label">Tickets resueltos</span>
+                    </div>
+                    <div class="why-counter">
+                        <span class="counter-num" data-target="5">0</span><span class="counter-suffix">★</span>
+                        <span class="counter-label">Calificación</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: texto -->
+            <div class="col-lg-7 pl-lg-5">
+                <p class="section-label reveal">¿Por qué elegir SOportec?</p>
+                <h2 class="section-heading reveal">
+                    Tecnología de primer nivel,<br>
+                    <span class="gradient-text">atención cercana y humana</span>
+                </h2>
+                <p class="section-text reveal">
+                    Somos una empresa de servicios e integraciones TI con foco en Lima Metropolitana.
+                    Combinamos el rigor técnico de soluciones enterprise con la agilidad de un equipo
+                    local que conoce tu zona, tu industria y tus necesidades.
+                </p>
+
+                <div class="why-features">
+                    <div class="why-feature reveal">
+                        <div class="why-feature-icon"><i class="fa fa-map-marker"></i></div>
+                        <div>
+                            <h5>Cobertura local garantizada</h5>
+                            <p>Atendemos en Surco, Barranco, San Isidro, Miraflores y San Luis con técnicos
+                            disponibles para visitas el mismo día.</p>
+                        </div>
+                    </div>
+                    <div class="why-feature reveal">
+                        <div class="why-feature-icon"><i class="fa fa-users"></i></div>
+                        <div>
+                            <h5>Equipo certificado y bilingüe</h5>
+                            <p>Técnicos certificados en plataformas Microsoft, Cisco y Aruba, con atención
+                            en inglés y español para empresas con presencia internacional.</p>
+                        </div>
+                    </div>
+                    <div class="why-feature reveal">
+                        <div class="why-feature-icon"><i class="fa fa-bar-chart"></i></div>
+                        <div>
+                            <h5>Visibilidad y trazabilidad total</h5>
+                            <p>Cada incidencia queda registrada, asignada y medida. Reportes mensuales
+                            para que tu gerencia tenga control total sobre el soporte TI.</p>
+                        </div>
+                    </div>
+                    <div class="why-feature reveal">
+                        <div class="why-feature-icon"><i class="fa fa-home"></i></div>
+                        <div>
+                            <h5>Servicios para empresas y hogares</h5>
+                            <p>Desde redes corporativas con múltiples sedes hasta la configuración de
+                            tu router doméstico — tenemos el plan adecuado para cada necesidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ZONAS DE COBERTURA
+============================================================ -->
+<section class="zones-section">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-7">
+                <p class="section-label reveal">Zonas de Atención</p>
+                <h2 class="section-heading reveal">Cobertura en Lima y Provincias</h2>
+                <p class="section-text reveal">
+                    Visitas presenciales en Lima Metropolitana y soporte remoto para
+                    <strong>cualquier ciudad del Perú</strong>. Donde estés, te ayudamos.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Lima Presencial -->
+            <div class="col-lg-6 mb-4">
+                <div class="zone-block reveal">
+                    <div class="zone-block-header">
+                        <div class="zone-block-icon"><i class="fa fa-map-marker"></i></div>
+                        <div>
+                            <h4 class="zone-block-title">Visitas Presenciales — Lima</h4>
+                            <p class="zone-block-sub">Técnicos disponibles el mismo día</p>
+                        </div>
+                    </div>
+                    <div class="zone-tags">
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Santiago de Surco</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Miraflores</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> San Isidro</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Barranco</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> San Luis</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> La Molina</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> San Borja</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Chorrillos</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Lince</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Jesús María</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Magdalena</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Pueblo Libre</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> San Miguel</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Callao</span>
+                        <span class="zone-tag"><i class="fa fa-map-marker"></i> Los Olivos</span>
+                        <span class="zone-tag zone-tag-more">+ Todo Lima Metropolitana</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soporte Remoto Nacional -->
+            <div class="col-lg-6 mb-4">
+                <div class="zone-block zone-block-remote reveal">
+                    <div class="zone-block-header">
+                        <div class="zone-block-icon zone-block-icon-remote"><i class="fa fa-wifi"></i></div>
+                        <div>
+                            <h4 class="zone-block-title">Soporte Remoto — Todo el Perú</h4>
+                            <p class="zone-block-sub">Conexión segura en minutos, sin importar la distancia</p>
+                        </div>
+                    </div>
+                    <div class="zone-tags">
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Lima</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Arequipa</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Trujillo</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Chiclayo</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Piura</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Iquitos</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Cusco</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Huancayo</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Tacna</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Ica</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Pucallpa</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Chimbote</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Juliaca</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Cajamarca</span>
+                        <span class="zone-tag zone-tag-remote"><i class="fa fa-circle"></i> Ayacucho</span>
+                        <span class="zone-tag zone-tag-more-remote">+ Cualquier ciudad con internet</span>
+                    </div>
+                    <div class="zone-remote-note">
+                        <i class="fa fa-lock"></i>
+                        Acceso remoto seguro · Sin instalar nada adicional
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     COTIZAR / CTA
+============================================================ -->
+<section id="cotizar" class="cta-section">
+    <div class="cta-bg-particles" aria-hidden="true"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <p class="section-label reveal">Solicita tu cotización</p>
+                <h2 class="section-heading reveal" style="font-size:clamp(22px,3.5vw,40px)">
+                    ¿Listo para llevar tu tecnología<br>
+                    <span class="gradient-text">al siguiente nivel?</span>
+                </h2>
+                <p class="section-text reveal">
+                    Cuéntanos qué necesitas y te respondemos en menos de 2 horas con
+                    una propuesta personalizada sin compromiso.
+                </p>
+                <div class="cta-contact-info reveal">
+                    <a href="https://wa.me/51974985007" target="_blank" rel="noopener" class="cta-contact-item">
+                        <i class="fa fa-whatsapp"></i>
+                        <span>+51 974 985 007</span>
+                    </a>
+                    <a href="tel:0113244896" class="cta-contact-item">
+                        <i class="fa fa-phone"></i>
+                        <span>01 3244896</span>
+                    </a>
+                    <a href="mailto:cristianjbr755@gmail.com" class="cta-contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <span>cristianjbr755@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="col-lg-6">
+                <div class="contact-form-card reveal">
+                    <h4 class="form-title">Solicitar Asistencia</h4>
+                    <form id="contactForm" onsubmit="sendMail(event)" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-tech">
+                                    <label for="cf-nombre">Nombre *</label>
+                                    <input type="text" id="cf-nombre" class="input-tech"
+                                           placeholder="Tu nombre completo" required>
+                                    <span class="form-error" id="err-nombre"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-tech">
+                                    <label for="cf-empresa">Empresa</label>
+                                    <input type="text" id="cf-empresa" class="input-tech"
+                                           placeholder="Nombre de tu empresa">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-tech">
+                                    <label for="cf-email">Correo *</label>
+                                    <input type="email" id="cf-email" class="input-tech"
+                                           placeholder="tu@correo.com" required>
+                                    <span class="form-error" id="err-email"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-tech">
+                                    <label for="cf-telefono">WhatsApp / Teléfono</label>
+                                    <input type="tel" id="cf-telefono" class="input-tech"
+                                           placeholder="9XX XXX XXX">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-tech">
+                            <label for="cf-tipo">Tipo de cliente</label>
+                            <select id="cf-tipo" class="input-tech">
+                                <option value="" disabled selected>¿Empresa o Hogar?</option>
+                                <option value="empresa">Empresa (B2B)</option>
+                                <option value="hogar">Hogar (B2C)</option>
+                            </select>
+                        </div>
+                        <div class="form-group-tech">
+                            <label for="cf-servicio">Servicio de interés</label>
+                            <select id="cf-servicio" class="input-tech">
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option>Soporte Técnico Bilingüe</option>
+                                <option>Soporte por Tickets (Helpdesk)</option>
+                                <option>Cableado Estructurado</option>
+                                <option>Visitas Presenciales</option>
+                                <option>Mantenimiento de Servidores</option>
+                                <option>Configuración de Dominios / Intune / AD</option>
+                                <option>Redes y Conectividad (Cisco / Aruba / Huawei)</option>
+                                <option>Suministro de Accesorios</option>
+                                <option>Formateo y Preparación de Equipos</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group-tech">
+                            <label for="cf-mensaje">Mensaje *</label>
+                            <textarea id="cf-mensaje" class="input-tech" rows="4"
+                                      placeholder="Cuéntanos qué necesitas..." required></textarea>
+                            <span class="form-error" id="err-mensaje"></span>
+                        </div>
+                        <button type="submit" class="btn-submit-tech" id="btnSubmit">
+                            <span id="btnText"><i class="fa fa-paper-plane"></i> Enviar Solicitud</span>
+                            <span id="btnLoading" style="display:none"><i class="fa fa-spinner fa-spin"></i> Enviando...</span>
+                        </button>
+                        <p id="formSuccess" class="form-success-msg" style="display:none">
+                            <i class="fa fa-check-circle"></i> ¡Mensaje enviado! Te respondemos pronto.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<section id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- Logo + descripción -->
+                <div class="col-lg-4 col-md-6 footer-box mb-4">
+                    <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png"
+                         alt="SOportec" class="footer-logo">
+                    <p class="footer-desc">
+                        Servicios e integraciones TI profesionales para empresas y hogares en Lima Metropolitana.
+                        Tecnología confiable, soporte humano.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"  class="social-link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"  class="social-link"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://wa.me/51974985007" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicios -->
+                <div class="col-lg-2 col-md-6 col-12 footer-box mb-4">
+                    <p class="footer-heading">Servicios</p>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="atencion-tickets.html">Tickets Helpdesk</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="cableado-estructurado.html">Cableado Estructurado</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Redes y Conectividad</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="soporte-bilingue.html">Soporte Bilingüe</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="servidores.html">Mantenimiento Servidores</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Formateo de Equipos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Zonas -->
+                <div class="col-lg-2 col-md-6 col-12 footer-box mb-4">
+                    <p class="footer-heading">Zonas de Atención</p>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--neon-cyan)"></i> Santiago de Surco</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--neon-cyan)"></i> Barranco</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--neon-cyan)"></i> San Isidro</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--neon-cyan)"></i> Miraflores</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--neon-cyan)"></i> San Luis</li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-lg-4 col-md-6 footer-box mb-4">
+                    <p class="footer-heading">Contáctanos</p>
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <i class="fa fa-map-marker"></i>
+                            <span>San Luis, Lima — Perú</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+51974985007">+51 974 985 007</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-whatsapp"></i>
+                            <a href="https://wa.me/51974985007" target="_blank" rel="noopener">
+                                WhatsApp Directo
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope-o"></i>
+                            <a href="mailto:cristianjbr755@gmail.com">cristianjbr755@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <p class="copyright mb-0">© 2026 SOportec. Todos los derechos reservados.</p>
+                <p class="copyright mb-0">Diseñado y desarrollado por SOportec</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scroll to Top -->
+<a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Google Translate (oculto) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script src="script.js"></script>
+<script>
+  // Alternar ícono del menú hamburguesa ↔ X en mobile (Bootstrap 4 + jQuery)
+  $(document).ready(function () {
+    $('#navbarNav').on('show.bs.collapse', function () {
+      $('#navTogglerIcon').removeClass('fa-bars').addClass('fa-times');
+    });
+    $('#navbarNav').on('hide.bs.collapse', function () {
+      $('#navTogglerIcon').removeClass('fa-times').addClass('fa-bars');
+    });
+  });
+</script>
+
+<!-- Google Translate API -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    try {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            autoDisplay: false
+        }, 'google_translate_element');
+        console.log('Google Translate inicializado');
+    } catch (e) {
+        console.error('Error al inicializar Google Translate:', e);
+    }
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>

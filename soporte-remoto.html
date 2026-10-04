@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Remoto — SOportec</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css?v=1.2">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* ── Página interna ── */
+        .page-hero {
+            background: linear-gradient(135deg, #050a14 0%, #0a1640 60%, #050a14 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,245,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,245,255,0.04) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes gridMove {
+            0%   { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        .page-hero .container { position: relative; z-index: 2; }
+
+        .breadcrumb-tech {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .breadcrumb-tech .breadcrumb-item a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .breadcrumb-tech .breadcrumb-item a:hover { color: var(--neon-cyan); }
+        .breadcrumb-tech .breadcrumb-item.active { color: var(--neon-cyan); font-size: 0.85rem; }
+        .breadcrumb-tech .breadcrumb-item + .breadcrumb-item::before { color: var(--text-muted); }
+
+        .page-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(28px, 5vw, 52px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #0066ff, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+        }
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .page-icon {
+            width: 80px;
+            filter: invert(1) brightness(2) sepia(1) hue-rotate(170deg) saturate(4)
+                    drop-shadow(0 0 12px var(--neon-cyan));
+            margin-bottom: 24px;
+        }
+
+        /* ── Secciones de contenido ── */
+        .content-section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+        .content-section.alt {
+            background: var(--dark-surface);
+        }
+
+        /* Imagen con glow */
+        .service-photo {
+            border-radius: 10px;
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 0 30px rgba(0,102,255,0.2);
+            width: 100%;
+            object-fit: cover;
+            height: 280px;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .service-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 50px rgba(0,245,255,0.2);
+        }
+
+        /* Títulos de sección */
+        .section-label {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--neon-cyan);
+            margin-bottom: 10px;
+        }
+        .section-heading {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(20px, 3vw, 30px);
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .section-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        /* Lista de features */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.93rem;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        .feature-list li .icon {
+            color: var(--neon-cyan);
+            font-size: 1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Stats */
+        .stats-row {
+            padding: 60px 0;
+            background: var(--dark-card);
+            border-top: 1px solid var(--border-glow);
+            border-bottom: 1px solid var(--border-glow);
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            background: linear-gradient(135deg, #0066ff, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Process steps */
+        .process-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 36px;
+        }
+        .step-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--neon-cyan);
+            opacity: 0.25;
+            line-height: 1;
+            min-width: 50px;
+        }
+        .step-content h5 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #0a1640, #050a14);
+            border-top: 1px solid var(--border-glow);
+            border-bottom: 1px solid var(--border-glow);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(20px, 3.5vw, 36px);
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 32px;
+        }
+        .btn-tech {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            background: transparent;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 14px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 0 14px rgba(0,245,255,0.15);
+        }
+        .btn-tech:hover {
+            background: var(--neon-cyan);
+            color: var(--dark-bg);
+            box-shadow: 0 0 30px rgba(0,245,255,0.45);
+            text-decoration: none;
+        }
+        .btn-tech-filled {
+            background: var(--neon-cyan);
+            color: var(--dark-bg);
+            font-weight: 700;
+        }
+        .btn-tech-filled:hover {
+            background: #00d4e0;
+            color: var(--dark-bg);
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-bottom: 30px;
+        }
+        .back-link:hover { color: var(--neon-cyan); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .page-hero { padding: 100px 0 60px; }
+            .service-photo { height: 200px; margin-bottom: 20px; }
+            .content-section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+        <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#top">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#cotizar">Cotizar</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about-us">Acerca de Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#footer">Contacto</a></li>
+        <li class="nav-item ml-2 d-flex align-items-center">
+          <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+            <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    </div>
+    </nav>
+    </section>
+
+    <!-- HERO DE PÁGINA -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link">
+                <i class="fa fa-arrow-left"></i> Volver a Servicios
+            </a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-tech">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#services">Servicios</a></li>
+                    <li class="breadcrumb-item active">Soporte Remoto</li>
+                </ol>
+            </nav>
+            <img src="Imagenes/images/headset.svg" class="page-icon" alt="Soporte Remoto">
+            <h1 class="page-title">Soporte Remoto</h1>
+            <p class="page-subtitle">Gestión y diagnóstico de sistemas a nivel administrador mediante conexión remota cifrada. Respondemos donde y cuando lo necesites.</p>
+        </div>
+    </section>
+
+    <!-- ¿QUÉ ES? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=700&q=80"
+                         alt="Técnico trabajando remotamente" class="service-photo">
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Qué es?</p>
+                    <h2 class="section-heading">Acceso seguro a tus equipos,<br>sin importar la distancia</h2>
+                    <p class="section-text">
+                        Nuestro servicio de Soporte Remoto te permite recibir asistencia técnica profesional
+                        directamente en tus estaciones de trabajo, sin necesidad de esperar una visita presencial.
+                        Nos conectamos de forma segura mediante software de acceso remoto cifrado y resolvemos
+                        el problema en tiempo real.
+                    </p>
+                    <p class="section-text">
+                        Desde la instalación de software y configuración de redes hasta el diagnóstico avanzado
+                        de sistemas operativos, nuestros técnicos certificados tienen acceso completo a nivel
+                        administrador para una resolución rápida y efectiva.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">&lt;1hr</div>
+                        <div class="stat-label">Tiempo de respuesta</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">256</div>
+                        <div class="stat-label">Bit de encriptación</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Disponibilidad</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Resolución en 1ra sesión</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFICIOS -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                    <img src="Imagenes/images/remoto.png"
+                         alt="Pantalla de soporte técnico" class="service-photo">
+                </div>
+                <div class="col-md-6 order-md-1 pr-md-5">
+                    <p class="section-label">Beneficios</p>
+                    <h2 class="section-heading">Todo lo que obtienes con nuestro soporte</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Conexión cifrada AES-256</strong> — tus datos y sistemas siempre protegidos durante la sesión.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Acceso a nivel administrador</strong> — resolvemos problemas profundos del sistema sin limitaciones.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Sin esperas presenciales</strong> — asistencia inmediata desde cualquier ubicación del mundo.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Grabación de sesión opcional</strong> — auditoría completa de cada intervención técnica.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Reporte post-sesión</strong> — recibes un informe detallado de lo realizado y recomendaciones.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Soporte bilingüe</strong> — atención en español e inglés sin costo adicional.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <p class="section-label">Cómo funciona</p>
+                    <h2 class="section-heading">Proceso de atención en 4 pasos</h2>
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h5>Apertura del ticket</h5>
+                            <p>El usuario reporta el incidente vía email, WhatsApp o plataforma de tickets. Asignamos prioridad y técnico disponible de inmediato.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h5>Conexión remota segura</h5>
+                            <p>El técnico envía un enlace de sesión cifrada. El usuario autoriza el acceso con un clic — sin instalar software adicional.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h5>Diagnóstico y resolución</h5>
+                            <p>El técnico diagnostica el problema en tiempo real, aplica la solución y verifica que el sistema funcione correctamente.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h5>Cierre y reporte</h5>
+                            <p>Se cierra el ticket con confirmación del usuario y se envía un reporte detallado de la intervención realizada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&q=80"
+                         alt="Proceso de soporte técnico" class="service-photo" style="height:420px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿PARA QUIÉN? -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">¿Para quién es?</p>
+                    <h2 class="section-heading">Ideal para empresas que necesitan rapidez</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-building" style="font-size:2rem;color:var(--neon-cyan);margin-bottom:16px;display:block;"></i>
+                        <h4>PYMEs y corporativos</h4>
+                        <p>Empresas con equipos distribuidos en múltiples oficinas o con colaboradores en home office que requieren asistencia técnica ágil.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-globe" style="font-size:2rem;color:var(--neon-cyan);margin-bottom:16px;display:block;"></i>
+                        <h4>Empresas internacionales</h4>
+                        <p>Organizaciones con personal en distintos países que necesitan soporte técnico bilingüe sin barreras geográficas ni de idioma.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-clock-o" style="font-size:2rem;color:var(--neon-cyan);margin-bottom:16px;display:block;"></i>
+                        <h4>Operaciones críticas</h4>
+                        <p>Negocios donde cada minuto de inactividad tiene un costo, y que necesitan resolución inmediata sin depender de visitas programadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para un soporte sin fronteras?</h2>
+            <p>Contáctanos hoy y te explicamos cómo integrar el soporte remoto en tu empresa.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3" style="gap:16px;">
+                <a href="index.html#cotizar" class="btn-tech btn-tech-filled mr-3">Ver planes y precios</a>
+                <a href="index.html#footer" class="btn-tech">Contactar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <img src="" class="footer-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-box">
+                    <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png">
+                    <p>Agenda una cita y te contamos más sobre nuestros planes y procesos.</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>CONTACTANOS</b></p>
+                    <div class="contact-info-list">
+                        <div class="contact-item"><i class="fa fa-map-marker"></i>SAN LUIS, LIMA-PERU</div>
+                        <div class="contact-item"><i class="fa fa-phone"></i>974985007</div>
+                        <div class="contact-item"><i class="fa fa-envelope-o"></i>cristianjbr755@gmail.com</div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>ESCRÍBENOS</b></p>
+                    <form id="contactForm" onsubmit="sendMail(event)">
+                        <input type="text" id="cf-nombre" class="form-control mb-2" placeholder="Tu nombre" required>
+                        <input type="text" id="cf-empresa" class="form-control mb-2" placeholder="Empresa">
+                        <input type="email" id="cf-email" class="form-control mb-2" placeholder="Tu correo" required>
+                        <input type="tel" id="cf-telefono" class="form-control mb-2" placeholder="Teléfono / WhatsApp">
+                        <select id="cf-servicio" class="form-control mb-2">
+                            <option value="" disabled selected>Servicio de interés</option>
+                            <option>Soporte Remoto</option>
+                            <option>Cableado Estructurado</option>
+                            <option>Soporte Bilingüe</option>
+                            <option>Visitas Técnicas</option>
+                            <option>Servidores</option>
+                            <option>Atención de Tickets</option>
+                            <option>Plan Starter</option>
+                            <option>Plan Pro</option>
+                            <option>Plan Enterprise</option>
+                        </select>
+                        <textarea id="cf-mensaje" class="form-control mb-2" rows="3" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Website creado por SOportec</p>
+        </div>
+    </section>
+
+<!-- Scroll To Top -->
+<a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+<script>
+    var btn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { btn.classList.add('visible'); }
+        else { btn.classList.remove('visible'); }
+    });
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+<script>
+function sendMail(e) {
+    e.preventDefault();
+    var nombre   = document.getElementById('cf-nombre').value;
+    var empresa  = document.getElementById('cf-empresa').value;
+    var email    = document.getElementById('cf-email').value;
+    var telefono = document.getElementById('cf-telefono').value;
+    var servicio = document.getElementById('cf-servicio').value;
+    var mensaje  = document.getElementById('cf-mensaje').value;
+    var subject = encodeURIComponent('Consulta desde web - ' + nombre);
+    var body    = encodeURIComponent(
+        'Nombre: ' + nombre + '\n' +
+        'Empresa: ' + empresa + '\n' +
+        'Correo: ' + email + '\n' +
+        'Teléfono: ' + telefono + '\n' +
+        'Servicio de interés: ' + servicio + '\n\n' +
+        'Mensaje:\n' + mensaje
+    );
+    window.location.href = 'mailto:cristianjbr755@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+<!-- Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,es',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+var currentLang = 'es';
+function toggleLang() {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    var isEn = currentLang === 'en';
+    document.getElementById('langFlag').textContent = isEn ? '🇵🇪' : '🇺🇸';
+    document.getElementById('langLabel').textContent = isEn ? 'ES' : 'EN';
+    var select = document.querySelector('.goog-te-combo');
+    if (select) {
+        select.value = isEn ? 'en' : 'es';
+        select.dispatchEvent(new Event('change'));
+    } else {
+        setTimeout(function() {
+            var s = document.querySelector('.goog-te-combo');
+            if (s) { s.value = isEn ? 'en' : 'es'; s.dispatchEvent(new Event('change')); }
+        }, 800);
+    }
+}
+window.addEventListener('load', function() {
+    var style = document.createElement('style');
+    style.innerHTML = '.goog-te-banner-frame,.skiptranslate{display:none!important;}body{top:0!important;}.goog-te-gadget{display:none!important;}';
+    document.head.appendChild(style);
+});
+</script>
+</body>
+</html>

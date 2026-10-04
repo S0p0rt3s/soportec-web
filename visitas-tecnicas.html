@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visitas Técnicas Presenciales — SOportec. Soporte IT in situ en Lima: diagnóstico, reparación de hardware y mantenimiento preventivo.">
+    <title>Visitas Técnicas — SOportec</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- Font Awesome 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Estilos propios (paleta corporativa) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* ── Hero de página interna ─────────────────────────────── */
+        .page-hero {
+            background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-mid) 60%, var(--blue-primary) 100%);
+            padding: 130px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes gridMove {
+            0%   { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        .page-hero .container { position: relative; z-index: 2; }
+
+        /* Breadcrumb */
+        .breadcrumb-tech { background: transparent; padding: 0; margin-bottom: 20px; }
+        .breadcrumb-tech .breadcrumb-item a { color: rgba(255,255,255,0.55); font-size: 0.85rem; transition: color 0.3s; }
+        .breadcrumb-tech .breadcrumb-item a:hover { color: var(--orange); }
+        .breadcrumb-tech .breadcrumb-item.active { color: var(--orange); font-size: 0.85rem; }
+        .breadcrumb-tech .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.35); }
+
+        /* Títulos hero */
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 52px);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            letter-spacing: 0.03em;
+        }
+        .page-title span {
+            background: linear-gradient(135deg, var(--blue-light) 0%, var(--orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-subtitle {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.05rem;
+            max-width: 600px;
+            line-height: 1.75;
+        }
+        .page-icon {
+            width: 72px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 24px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.55);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-bottom: 28px;
+        }
+        .back-link:hover { color: var(--orange); text-decoration: none; }
+
+        /* ── Secciones de contenido ─────────────────────────────── */
+        .content-section { padding: 80px 0; background: var(--bg-white); }
+        .content-section.alt { background: var(--bg-light); }
+
+        .service-photo {
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            object-fit: cover;
+            height: 320px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .service-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(13,33,55,0.2);
+        }
+
+        /* Labels / headings internos */
+        .inner-label {
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+        .inner-heading {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 3vw, 30px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 18px;
+            line-height: 1.3;
+        }
+        .inner-text {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        /* Lista de características */
+        .feature-list { list-style: none; padding: 0; margin: 24px 0; }
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-body);
+            font-size: 0.93rem;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        .feature-list li .icon {
+            color: var(--orange);
+            font-size: 1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Stats row */
+        .stats-row {
+            padding: 60px 0;
+            background: var(--blue-primary);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .stat-item { text-align: center; padding: 20px; }
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: clamp(30px, 5vw, 48px);
+            font-weight: 800;
+            color: var(--orange);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Proceso */
+        .process-step { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 36px; }
+        .step-content h5 {
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .step-content p { color: var(--text-body); font-size: 0.9rem; line-height: 1.7; margin: 0; }
+
+        /* Cards "para quién" */
+        .audience-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+        }
+        .audience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--orange);
+        }
+        .audience-card i { font-size: 2rem; color: var(--orange); margin-bottom: 16px; display: block; }
+        .audience-card h4 { font-family: var(--font-display); font-size: 0.85rem; color: var(--text-dark); margin-bottom: 12px; letter-spacing: 0.05em; text-transform: uppercase; }
+        .audience-card p { color: var(--text-body); font-size: 0.9rem; line-height: 1.7; margin: 0; }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-mid) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(20px, 3.5vw, 34px);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .cta-section p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 32px; }
+
+        .btn-inner {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-display);
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .btn-inner-filled {
+            background: var(--orange);
+            color: #fff;
+            border: 2px solid var(--orange);
+        }
+        .btn-inner-filled:hover {
+            background: var(--orange-hover);
+            border-color: var(--orange-hover);
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232,93,4,0.4);
+        }
+        .btn-inner-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .btn-inner-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #fff;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-hero  { padding: 110px 0 60px; }
+            .service-photo { height: 220px; margin-bottom: 24px; }
+            .content-section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                id="navToggler">
+            <i class="fa fa-bars" id="navTogglerIcon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html#top">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about-us">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="atencion-tickets.html">Soporte por Tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#footer">Contacto</a></li>
+                <li class="nav-item ml-2">
+                    <a href="index.html#cotizar" class="btn-nav-cta">Solicitar Asistencia</a>
+                </li>
+                <li class="nav-item ml-2 d-flex align-items-center">
+                    <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+                        <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</section>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="page-hero">
+    <div class="container">
+        <a href="index.html#services" class="back-link">
+            <i class="fa fa-arrow-left"></i> Volver a Servicios
+        </a>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-tech">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html#services">Servicios</a></li>
+                <li class="breadcrumb-item active">Visitas Técnicas</li>
+            </ol>
+        </nav>
+        <img src="Imagenes/images/person-raised-hand.svg" class="page-icon" alt="Visitas Técnicas">
+        <h1 class="page-title">Visitas <span>Técnicas</span></h1>
+        <p class="page-subtitle">
+            Mantenimiento físico y diagnóstico in situ. Desde la reparación de estaciones de trabajo
+            hasta la revisión de tu cuarto de servidores, estamos ahí cuando más nos necesitas.
+        </p>
+    </div>
+</section>
+
+<!-- ============================================================
+     ¿QUÉ ES?
+============================================================ -->
+<section class="content-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=700&q=80"
+                     alt="Técnico IT trabajando presencialmente en oficina" class="service-photo">
+            </div>
+            <div class="col-md-6 pl-md-5">
+                <p class="inner-label">¿Qué es?</p>
+                <h2 class="inner-heading">Cuando el problema requiere estar ahí en persona</h2>
+                <p class="inner-text">
+                    Algunos problemas técnicos no pueden resolverse de forma remota: hardware dañado,
+                    cableado físico defectuoso, equipos que no encienden o configuraciones que requieren
+                    acceso presencial al equipo. Para eso están nuestras Visitas Técnicas.
+                </p>
+                <p class="inner-text">
+                    Un técnico certificado de SOportec se desplaza hasta tus instalaciones, diagnostica
+                    el problema en sitio y aplica la solución de forma inmediata. Cubrimos visitas
+                    programadas y de emergencia en Lima Metropolitana.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     STATS
+============================================================ -->
+<div class="stats-row">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">4h</div>
+                    <div class="stat-label">Tiempo de llegada</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">Lima</div>
+                    <div class="stat-label">Cobertura principal</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">5★</div>
+                    <div class="stat-label">Satisfacción promedio</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Resolución en 1ra visita</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================
+     BENEFICIOS
+============================================================ -->
+<section class="content-section alt">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=700&q=80"
+                     alt="Técnico revisando rack de servidores" class="service-photo">
+            </div>
+            <div class="col-md-6 order-md-1 pr-md-5">
+                <p class="inner-label">Beneficios</p>
+                <h2 class="inner-heading">Soluciones reales, presencia física garantizada</h2>
+                <ul class="feature-list">
+                    <li>
+                        <span class="icon"><i class="fa fa-check-circle"></i></span>
+                        <span><strong>Diagnóstico presencial completo</strong> — el técnico evalúa físicamente el equipo, el entorno y la infraestructura para un diagnóstico preciso.</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-check-circle"></i></span>
+                        <span><strong>Reparación de hardware</strong> — reemplazo de componentes, limpieza de equipos, reparación de laptops, desktops y periféricos.</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-check-circle"></i></span>
+                        <span><strong>Revisión del cuarto de servidores</strong> — inspección física de racks, cableado, temperatura, UPS y equipos de red.</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-check-circle"></i></span>
+                        <span><strong>Mantenimiento preventivo</strong> — limpieza interna, actualización de firmware, revisión de discos y verificación de garantías.</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-check-circle"></i></span>
+                        <span><strong>Visitas programadas o de emergencia</strong> — atención calendarizada o respuesta urgente ante fallas críticas.</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-check-circle"></i></span>
+                        <span><strong>Reporte detallado</strong> — al finalizar cada visita entregamos un informe con hallazgos, soluciones aplicadas y recomendaciones.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PROCESO
+============================================================ -->
+<section class="content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-5 mb-md-0">
+                <p class="inner-label">Cómo funciona</p>
+                <h2 class="inner-heading">Del reporte a la solución en tu oficina</h2>
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h5>Solicitud de visita</h5>
+                        <p>El cliente reporta el problema por WhatsApp, email o tickets. Evaluamos si requiere atención presencial y coordinamos fecha y hora.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h5>Desplazamiento del técnico</h5>
+                        <p>El técnico asignado se traslada con las herramientas y repuestos necesarios según el problema reportado.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h5>Diagnóstico y reparación in situ</h5>
+                        <p>Inspección física completa del equipo o infraestructura. Aplicamos la solución en el momento siempre que sea posible.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h5>Verificación y entrega de reporte</h5>
+                        <p>Verificamos la solución con el usuario presente y entregamos el informe técnico antes de retirarnos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=700&q=80"
+                     alt="Técnico reparando equipo en sitio" class="service-photo" style="height:420px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ¿PARA QUIÉN?
+============================================================ -->
+<section class="content-section alt">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-8">
+                <p class="inner-label">¿Para quién es?</p>
+                <h2 class="inner-heading">Cuando la distancia no es una opción</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="audience-card">
+                    <i class="fa fa-wrench"></i>
+                    <h4>Fallas de hardware</h4>
+                    <p>Equipos que no encienden, pantallas rotas, discos dañados o puertos defectuosos que requieren intervención física inmediata.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="audience-card">
+                    <i class="fa fa-server"></i>
+                    <h4>Cuartos de servidores</h4>
+                    <p>Revisión periódica o de emergencia de tu infraestructura: servidores, switches, UPS, temperatura y cableado del rack.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="audience-card">
+                    <i class="fa fa-calendar-check-o"></i>
+                    <h4>Mantenimiento preventivo</h4>
+                    <p>Empresas que quieren evitar fallas con visitas periódicas para limpiar, actualizar y optimizar toda su infraestructura IT.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CTA
+============================================================ -->
+<section class="cta-section">
+    <div class="container">
+        <h2>¿Necesitas un técnico en tu oficina?</h2>
+        <p>Contáctanos y coordinamos una visita técnica para el mismo día o cuando lo necesites.</p>
+        <div class="d-flex flex-wrap justify-content-center" style="gap: 16px;">
+            <a href="index.html#cotizar" class="btn-inner btn-inner-filled">
+                <i class="fa fa-envelope"></i> Solicitar Visita
+            </a>
+            <a href="index.html#footer" class="btn-inner btn-inner-outline">
+                <i class="fa fa-phone"></i> Contactar ahora
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<section id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <!-- Logo + descripción -->
+                <div class="col-lg-4 col-md-6 footer-box mb-4">
+                    <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png"
+                         alt="SOportec" class="footer-logo">
+                    <p class="footer-desc">
+                        Servicios e integraciones TI profesionales para empresas y hogares en Lima Metropolitana.
+                        Tecnología confiable, soporte humano.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"  class="social-link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fa fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"  class="social-link"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://wa.me/51974985007" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Servicios -->
+                <div class="col-lg-2 col-md-6 col-12 footer-box mb-4">
+                    <p class="footer-heading">Servicios</p>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="atencion-tickets.html">Tickets Helpdesk</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="cableado-estructurado.html">Cableado Estructurado</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Redes y Conectividad</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="soporte-bilingue.html">Soporte Bilingüe</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Mantenimiento Servidores</a></li>
+                        <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Formateo de Equipos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Zonas -->
+                <div class="col-lg-2 col-md-6 col-12 footer-box mb-4">
+                    <p class="footer-heading">Zonas de Atención</p>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Santiago de Surco</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Barranco</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Isidro</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Miraflores</li>
+                        <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Luis</li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-lg-4 col-md-6 footer-box mb-4">
+                    <p class="footer-heading">Contáctanos</p>
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <i class="fa fa-map-marker"></i>
+                            <span>San Luis, Lima — Perú</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-phone"></i>
+                            <a href="tel:+51974985007">+51 974 985 007</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-whatsapp"></i>
+                            <a href="https://wa.me/51974985007" target="_blank" rel="noopener">
+                                WhatsApp Directo
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope-o"></i>
+                            <a href="mailto:cristianjbr755@gmail.com">cristianjbr755@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <p class="copyright mb-0">© 2026 SOportec. Todos los derechos reservados.</p>
+                <p class="copyright mb-0">Diseñado y desarrollado por SOportec</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scroll to Top -->
+<a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Google Translate (oculto) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script src="script.js"></script>
+
+<script>
+  // Alternar ícono del menú hamburguesa ↔ X en mobile (Bootstrap 4 + jQuery)
+  $(document).ready(function () {
+    $('#navbarNav').on('show.bs.collapse', function () {
+      $('#navTogglerIcon').removeClass('fa-bars').addClass('fa-times');
+    });
+    $('#navbarNav').on('hide.bs.collapse', function () {
+      $('#navTogglerIcon').removeClass('fa-times').addClass('fa-bars');
+    });
+  });
+</script>
+
+<!-- Google Translate API -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    try {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            autoDisplay: false
+        }, 'google_translate_element');
+    } catch (e) {
+        console.error('Error al inicializar Google Translate:', e);
+    }
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>

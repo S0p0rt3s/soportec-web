@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cableado Estructurado — SOportec</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#top">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atencion-tickets.html">Soporte por Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#footer">Contacto</a></li>
+                    <li class="nav-item ml-2">
+                        <a href="index.html#cotizar" class="btn-nav-cta">Solicitar Asistencia</a>
+                    </li>
+                    <li class="nav-item ml-2 d-flex align-items-center">
+                        <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+                            <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </section>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link"><i class="fa fa-arrow-left"></i> Volver a Servicios</a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-tech">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#services">Servicios</a></li>
+                    <li class="breadcrumb-item active">Cableado Estructurado</li>
+                </ol>
+            </nav>
+            <img src="Imagenes/images/router.svg" class="page-icon" alt="Cableado Estructurado">
+            <h1 class="page-title">Cableado Estructurado</h1>
+            <p class="page-subtitle">Modernizamos la red de tu empresa con instalaciones limpias, ordenadas y certificadas — para maximizar el rendimiento operativo de toda tu infraestructura.</p>
+        </div>
+    </section>
+
+    <!-- ¿QUÉ ES? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="Imagenes/images/tendido.jpg"
+                         alt="Rack de servidores con cableado ordenado" class="service-photo">
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Qué es?</p>
+                    <h2 class="section-heading">La columna vertebral de tu red empresarial</h2>
+                    <p class="section-text">
+                        El cableado estructurado es el sistema de cableado estandarizado que interconecta todos
+                        los dispositivos de tu empresa: computadoras, teléfonos, cámaras, servidores y puntos
+                        de acceso WiFi. Una instalación bien planificada garantiza velocidad, estabilidad y
+                        escalabilidad a largo plazo.
+                    </p>
+                    <p class="section-text">
+                        En SOportec diseñamos, instalamos y certificamos tu infraestructura de red con
+                        cable Cat6/Cat6A, organizamos los gabinetes de comunicaciones y documentamos cada
+                        punto de red para que tu equipo siempre sepa exactamente qué está conectado y dónde.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">10G</div>
+                        <div class="stat-label">Velocidad Cat6A</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Puntos certificados</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Años de estándar TIA-568</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Cortes por mal cableado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFICIOS -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=700&q=80"
+                         alt="Gabinete de red organizado" class="service-photo">
+                </div>
+                <div class="col-md-6 order-md-1 pr-md-5">
+                    <p class="section-label">Beneficios</p>
+                    <h2 class="section-heading">Red limpia, empresa que no se detiene</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Mayor velocidad y estabilidad</strong> — cable Cat6/Cat6A certificado para 10 Gbps y mínima interferencia electromagnética.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Gabinetes ordenados</strong> — etiquetado profesional, gestión de cables y patch panels para fácil mantenimiento futuro.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Escalabilidad garantizada</strong> — diseño pensado para crecer con tu empresa sin rehacerlo todo.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Certificación de puntos</strong> — cada punto de red es probado y documentado con equipo certificador.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Cumplimiento normativo</strong> — instalaciones bajo estándares TIA-568, ISO/IEC 11801 y EIA/TIA.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Documentación completa</strong> — entregamos planos de red y listado de puntos para que tu equipo IT siempre tenga control.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <p class="section-label">Cómo lo hacemos</p>
+                    <h2 class="section-heading">De la planificación a la certificación</h2>
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h5>Relevamiento y diseño</h5>
+                            <p>Visitamos tus instalaciones, levantamos el plano de red actual y diseñamos la nueva infraestructura según tus necesidades y proyección de crecimiento.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h5>Tendido de cableado</h5>
+                            <p>Instalamos el cableado Cat6/Cat6A por canaletas, bandejas o bajo piso, siguiendo rutas limpias y seguras sin interferir con la operación diaria.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h5>Armado del gabinete</h5>
+                            <p>Organizamos el rack o gabinete de comunicaciones: patch panels, switches, gestión de cables y etiquetado profesional de cada puerto.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h5>Certificación y entrega</h5>
+                            <p>Certificamos cada punto de red con equipo especializado, entregamos la documentación completa y capacitamos a tu equipo sobre el nuevo sistema.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="Imagenes/images/cableado.jpg"
+                         alt="Técnico realizando tendido de cable ethernet" class="service-photo" style="height: 420px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿PARA QUIÉN? -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">¿Para quién es?</p>
+                    <h2 class="section-heading">Para cualquier empresa que quiera una red sin sorpresas</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-industry" style="font-size:2rem;color:var(--orange);margin-bottom:16px;display:block;"></i>
+                        <h4>Nuevas oficinas</h4>
+                        <p>Si estás mudándote o construyendo, este es el momento ideal para instalar una infraestructura de red robusta desde cero y bien planificada.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-refresh" style="font-size:2rem;color:var(--orange);margin-bottom:16px;display:block;"></i>
+                        <h4>Redes obsoletas</h4>
+                        <p>Oficinas con cableado antiguo, desorganizado o sin etiquetar que generan problemas de conectividad y dificultan el trabajo del área IT.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-expand" style="font-size:2rem;color:var(--orange);margin-bottom:16px;display:block;"></i>
+                        <h4>Empresas en crecimiento</h4>
+                        <p>Negocios que están sumando puestos de trabajo, nuevas áreas o pisos y necesitan expandir su red sin perder rendimiento ni crear caos técnico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Tu red está limitando tu empresa?</h2>
+            <p>Contáctanos y te hacemos un diagnóstico sin costo de tu infraestructura actual.</p>
+            <div class="d-flex flex-wrap justify-content-center" style="gap:16px;">
+                <a href="index.html#cotizar" class="btn-tech btn-tech-filled mr-3">Ver planes y precios</a>
+                <a href="index.html#footer" class="btn-tech">Solicitar diagnóstico</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo + descripción -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png"
+                             alt="SOportec" class="footer-logo">
+                        <p class="footer-desc">
+                            Servicios e integraciones TI profesionales para empresas y hogares en Lima Metropolitana.
+                            Tecnología confiable, soporte humano.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"  class="social-link"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-link"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"  class="social-link"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://wa.me/51974985007" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Servicios</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="atencion-tickets.html">Tickets Helpdesk</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="cableado-estructurado.html">Cableado Estructurado</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Redes y Conectividad</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Soporte Bilingüe</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Mantenimiento Servidores</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Formateo de Equipos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Zonas -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Zonas de Atención</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Santiago de Surco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Barranco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Isidro</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Miraflores</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Luis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Contáctanos</p>
+                        <div class="contact-info-list">
+                            <div class="contact-item">
+                                <i class="fa fa-map-marker"></i>
+                                <span>San Luis, Lima — Perú</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:+51974985007">+51 974 985 007</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-whatsapp"></i>
+                                <a href="https://wa.me/51974985007" target="_blank" rel="noopener">
+                                    WhatsApp Directo
+                                </a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-envelope-o"></i>
+                                <a href="mailto:cristianjbr755@gmail.com">cristianjbr755@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <p class="copyright mb-0">© 2026 SOportec. Todos los derechos reservados.</p>
+                    <p class="copyright mb-0">Diseñado y desarrollado por SOportec</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Scroll To Top -->
+<a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Google Translate (oculto) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script src="script.js"></script>
+
+<!-- Google Translate API -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    try {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            autoDisplay: false
+        }, 'google_translate_element');
+        console.log('Google Translate inicializado');
+    } catch (e) {
+        console.error('Error al inicializar Google Translate:', e);
+    }
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>

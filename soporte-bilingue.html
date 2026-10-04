@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Bilingüe — SOportec</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#top">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atencion-tickets.html">Soporte por Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#footer">Contacto</a></li>
+                    <li class="nav-item ml-2">
+                        <a href="index.html#cotizar" class="btn-nav-cta">Solicitar Asistencia</a>
+                    </li>
+                    <li class="nav-item ml-2 d-flex align-items-center">
+                        <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+                            <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </section>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link"><i class="fa fa-arrow-left"></i> Volver a Servicios</a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-tech">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#services">Servicios</a></li>
+                    <li class="breadcrumb-item active">Soporte Bilingüe</li>
+                </ol>
+            </nav>
+            <img src="Imagenes/images/translate.svg" class="page-icon" alt="Soporte Bilingüe">
+            <h1 class="page-title">Soporte Bilingüe</h1>
+            <p class="page-subtitle">Atención técnica en inglés y español sin costo adicional. Tus usuarios internacionales reciben el mismo nivel de soporte claro, rápido y preciso.</p>
+            <div class="mt-4">
+                <span class="lang-badge"><span class="flag">🇵🇪</span> Español</span>
+                <span class="lang-badge"><span class="flag">🇺🇸</span> English</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿QUÉ ES? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="Imagenes/images/bilingue.png"
+                         alt="Equipo multicultural en oficina" class="service-photo">
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Qué es?</p>
+                    <h2 class="section-heading">Soporte técnico sin barreras de idioma</h2>
+                    <p class="section-text">
+                        En un entorno empresarial globalizado, la barrera del idioma puede convertirse en un
+                        obstáculo crítico cuando hay un problema técnico urgente. Nuestro servicio de Soporte
+                        Bilingüe garantiza que cada ticket, llamada o sesión remota se atienda con la misma
+                        precisión tanto en español como en inglés.
+                    </p>
+                    <p class="section-text">
+                        Nuestros técnicos están capacitados para comunicarse con fluidez en ambos idiomas,
+                        utilizando terminología técnica correcta y asegurando que el usuario entienda exactamente
+                        qué ocurrió y cómo se resolvió — sin confusión, sin malentendidos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Idiomas disponibles</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">$0</div>
+                        <div class="stat-label">Costo adicional</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Disponibilidad</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Técnicos certificados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BENEFICIOS -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                    <img src="Imagenes/images/razas.png"
+                         alt="Profesional atendiendo soporte bilingüe" class="service-photo">
+                </div>
+                <div class="col-md-6 order-md-1 pr-md-5">
+                    <p class="section-label">Beneficios</p>
+                    <h2 class="section-heading">Lo que obtienes con nuestro soporte bilingüe</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Comunicación precisa</strong> — terminología técnica correcta en ambos idiomas, sin traducciones confusas ni malentendidos.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Sin costo adicional</strong> — el soporte bilingüe está incluido en todos nuestros planes sin cargo extra.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Tickets en cualquier idioma</strong> — tu equipo puede abrir tickets en español o inglés y recibirán respuesta en el mismo idioma.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Documentación bilingüe</strong> — reportes post-sesión y manuales disponibles en ambos idiomas para tu equipo.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Reuniones técnicas</strong> — coordinamos calls con tus proveedores o clientes internacionales actuando como puente técnico-lingüístico.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong style="color:var(--text-main)">Experiencia con empresas internacionales</strong> — hemos dado soporte a equipos con usuarios en Perú, EE.UU. y Europa.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <p class="section-label">Cómo funciona</p>
+                    <h2 class="section-heading">Atención fluida en tu idioma preferido</h2>
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h5>El usuario elige su idioma</h5>
+                            <p>Al abrir el ticket o iniciar la sesión, el usuario indica si prefiere atención en español o en inglés. Sin formularios complicados.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h5>Asignación del técnico</h5>
+                            <p>Se asigna al técnico disponible con dominio del idioma requerido. Todos nuestros técnicos son bilingües certificados.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h5>Diagnóstico y resolución</h5>
+                            <p>El técnico comunica cada paso del proceso en el idioma del usuario, asegurando que entienda qué se está haciendo y por qué.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h5>Reporte en el idioma del usuario</h5>
+                            <p>El informe post-sesión se entrega en el idioma elegido, con resumen del problema, solución aplicada y recomendaciones futuras.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80"
+                         alt="Equipo de soporte internacional" class="service-photo" style="height:420px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿PARA QUIÉN? -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">¿Para quién es?</p>
+                    <h2 class="section-heading">Empresas con equipos globales o mixtos</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="index.html#cotizar" class="service-card-link">
+                        <div class="services text-center">
+                            <i class="fa fa-plane" style="font-size:2rem;color:var(--orange);margin-bottom:16px;display:block;"></i>
+                            <h4>Empresas multinacionales</h4>
+                            <p>Organizaciones con sedes en Latinoamérica y EE.UU. que necesitan un proveedor IT que se comunique sin fricción con todos sus equipos.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="index.html#cotizar" class="service-card-link">
+                        <div class="services text-center">
+                            <i class="fa fa-users" style="font-size:2rem;color:var(--orange);margin-bottom:16px;display:block;"></i>
+                            <h4>Equipos mixtos</h4>
+                            <p>Empresas peruanas con empleados extranjeros o viceversa, donde parte del equipo no habla español con fluidez.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="index.html#cotizar" class="service-card-link">
+                        <div class="services text-center">
+                            <i class="fa fa-handshake-o" style="font-size:2rem;color:var(--orange);margin-bottom:16px;display:block;"></i>
+                            <h4>Empresas con clientes internacionales</h4>
+                            <p>Negocios que deben presentar soluciones técnicas o coordinar con proveedores de tecnología en inglés y necesitan un puente confiable.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Tu equipo habla dos idiomas? Nosotros también.</h2>
+            <p>Contáctanos y te mostramos cómo el soporte bilingüe mejora la experiencia de tus usuarios internacionales.</p>
+            <div class="d-flex flex-wrap justify-content-center" style="gap:16px;">
+                <a href="index.html#cotizar" class="btn-tech btn-tech-filled mr-3">Ver planes y precios</a>
+                <a href="index.html#footer" class="btn-tech">Contactar ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo + descripción -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png"
+                             alt="SOportec" class="footer-logo">
+                        <p class="footer-desc">
+                            Servicios e integraciones TI profesionales para empresas y hogares en Lima Metropolitana.
+                            Tecnología confiable, soporte humano.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"  class="social-link"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-link"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"  class="social-link"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://wa.me/51974985007" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Servicios</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="atencion-tickets.html">Tickets Helpdesk</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="cableado-estructurado.html">Cableado Estructurado</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Redes y Conectividad</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="soporte-bilingue.html">Soporte Bilingüe</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Mantenimiento Servidores</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Formateo de Equipos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Zonas -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Zonas de Atención</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Santiago de Surco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Barranco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Isidro</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Miraflores</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Luis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Contáctanos</p>
+                        <div class="contact-info-list">
+                            <div class="contact-item">
+                                <i class="fa fa-map-marker"></i>
+                                <span>San Luis, Lima — Perú</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:+51974985007">+51 974 985 007</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-whatsapp"></i>
+                                <a href="https://wa.me/51974985007" target="_blank" rel="noopener">
+                                    WhatsApp Directo
+                                </a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-envelope-o"></i>
+                                <a href="mailto:cristianjbr755@gmail.com">cristianjbr755@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <p class="copyright mb-0">© 2026 SOportec. Todos los derechos reservados.</p>
+                    <p class="copyright mb-0">Diseñado y desarrollado por SOportec</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Scroll To Top -->
+<a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Google Translate (oculto) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script src="script.js"></script>
+
+<!-- Google Translate API -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    try {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            autoDisplay: false
+        }, 'google_translate_element');
+        console.log('Google Translate inicializado');
+    } catch (e) {
+        console.error('Error al inicializar Google Translate:', e);
+    }
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>
