@@ -2130,6 +2130,21 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
         color: rgba(255,255,255,0.5);
         text-align: left;
     }
+    /* Contáctanos: mismo alineamiento que Zonas de Atención */
+    .contact-info-list {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 12px;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+    }
 }
 
 @media (max-width: 575px) {
