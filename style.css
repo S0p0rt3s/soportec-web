@@ -2145,6 +2145,10 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
         gap: 10px;
         text-align: left;
     }
+    /* Botones de contacto CTA centrados en mobile */
+    .cta-contact-info {
+        align-items: center;
+    }
 }
 
 @media (max-width: 575px) {
