@@ -1,0 +1,31 @@
+https://github.com/S0p0rt3s/soportec-web
+
+ https://github.com/S0p0rt3s/soportec-web/actions
+Deberías ver un workflow "pages build and deployment" corriendo (círculo amarillo ⏳). Espera a que se ponga en ✅ verde — tarda entre 1 y 3 minutos.
+
+https://github.com/S0p0rt3s/soportec-web/settings
+
+2. Baja hasta el final de la página hasta "Danger Zone"
+
+3. Clic en "Change visibility"
+
+4. Selecciona "Make public"
+
+5. Confirma escribiendo el nombre del repositorio: S0p0rt3s/soportec-web
+
+6. Clic en "I understand, change repository visibility"
+
+Si en Actions no aparece ningún workflow, ve a:
+https://github.com/S0p0rt3s/soportec-web/settings/pages y confirma que esté configurado con:
+
+Branch: main
+Folder: / (root)
+Clic en Save de nuevo
+
+Poweshell (Para cambios)
+cd "d:\Prueba-Bootstrap"
+git add .
+git commit -m "descripción del cambio"
+git push
+
+
