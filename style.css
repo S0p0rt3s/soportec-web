@@ -2524,3 +2524,48 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
 .service-card-link:hover .services {
     box-shadow: 0 8px 30px rgba(232, 93, 4, 0.15);
 }
+
+
+/* Contenedor principal con perspectiva 3D */
+.flip-card-wrapper {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 100%;
+    min-height: 380px; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+/* Contenedor interno que ejecuta el giro */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Activación del giro al pasar el cursor (hover) */
+.flip-card-wrapper:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 16px; /* Mantiene los bordes de tu diseño original */
+}
+
+/* El frente necesita mantener la organización original */
+.flip-card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+/* El dorso inicia girado a 180 grados */
+.flip-card-back {
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
