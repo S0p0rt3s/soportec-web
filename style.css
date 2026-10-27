@@ -743,12 +743,16 @@ a   { text-decoration: none; transition: var(--transition); }
     .intune-ms-text  { font-size: 0.85rem; }
     .intune-product-text { font-size: 1.5rem; }
     .intune-product-name { align-items: center; }
-    /* Texto simplificado */
-    .intune-text { display: block; }
-    .intune-title { font-size: 1rem; margin-bottom: 6px; }
-    .intune-desc { display: none; }
-    .intune-tags { justify-content: center; }
-    .intune-tags span { font-size: 0.65rem; padding: 3px 8px; }
+    /* Ocultar todo el bloque de texto en móvil */
+    .intune-text { 
+        display: none !important; 
+    }
+    
+    /* Agrandar un poco la tarjeta del logo para que resalte al estar sola */
+    .intune-logo-wrap {
+        transform: scale(1.15);
+        margin: 0 auto;
+    }
 }
 
 /* Chip */
