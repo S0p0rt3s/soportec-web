@@ -1730,7 +1730,7 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
 /* Móvil */
 @media (max-width: 767px) {
     .footer-logo {
-        height: 110px;
+        height: 180px;
         margin-left: auto;
         margin-right: auto;
     }
