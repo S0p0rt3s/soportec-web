@@ -1003,17 +1003,19 @@ a   { text-decoration: none; transition: var(--transition); }
 .clients-slide:hover { animation-play-state: paused; }
 
 .client-logo {
-    height: 56px;
-    width: 120px;
+    height: 65px;       /* Altura fija para que todos tengan el mismo alto */
+    width: auto;        /* Ancho automático para respetar la proporción original de cada logo */
+    max-width: 160px;   /* Evita que los logos muy alargados se expandan demasiado */
     object-fit: contain;
     opacity: 0.85;
     transition: var(--transition);
     flex-shrink: 0;
+    margin: 0 10px;     /* Espaciado horizontal entre logos */
 }
 
 .client-logo:hover {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 /* ================================================================
@@ -2574,5 +2576,12 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
     .flip-card-wrapper:hover .flip-card-inner {
         transform: rotateY(180deg);
         transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+}
+
+@media (max-width: 767px) {
+    .client-logo {
+        height: 48px;       /* Altura más compacta para celulares */
+        max-width: 120px;
     }
 }
