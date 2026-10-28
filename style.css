@@ -2595,3 +2595,33 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
         max-width: 120px;
     }
 }
+
+/* Botón Volver a Servicios - Estilo Naranja Distintivo */
+.btn-back-services {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff; 
+    border: 1px solid rgba(255, 107, 0, 0.5); /* Borde naranja sutil */
+    background: rgba(255, 107, 0, 0.05); /* Fondo naranja casi transparente */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Color naranja para la flecha */
+.btn-back-services i {
+    color: #ff6b00; 
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.btn-back-services:hover {
+    background: rgba(255, 107, 0, 0.15); /* Fondo ligeramente más visible */
+    color: #ffffff;
+    border-color: #ff6b00; /* Borde naranja sólido */
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2); /* Resplandor sutil */
+    transform: translateY(-1px); /* Pequeño efecto de elevación */
+}
