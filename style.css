@@ -736,11 +736,18 @@ a   { text-decoration: none; transition: var(--transition); }
         margin: 0 auto;
     }
     .intune-logo-wrap {
+        /* Tus valores actuales que ya centramos... */
         padding: 20px !important;
         margin: auto !important;
-        width: 75% !important;        /* Reducimos del 85% al 75% para mejor proporción */
-        max-width: 220px !important;  /* Tamaño ideal para móviles */
+        width: 75% !important;
+        max-width: 220px !important;
         transform: none !important;
+
+        /* Nuevos efectos para darle protagonismo: */
+        box-shadow: 0 10px 32px rgba(0, 120, 212, 0.4) !important; /* Resplandor azul Microsoft */
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;    /* Borde cristalino */
+        background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.01) 100%) !important;
+        border-radius: 16px !important; /* Aseguramos que las curvas sean suaves */
     }
     .intune-ms-icon { width: 56px; height: 56px; }
     .intune-ms-text  { font-size: 0.85rem; }
