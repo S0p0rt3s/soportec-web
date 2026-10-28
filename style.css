@@ -2624,4 +2624,31 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(255, 107, 0, 0.2); /* Resplandor sutil */
     transform: translateY(-1px); /* Pequeño efecto de elevación */
+}/* --- AJUSTES DE VISIBILIDAD PARA MÓVILES (Smartphones y Tablets) --- */
+@media (max-width: 768px) {
+    /* 1. Darle espacio suficiente al Hero para que el Navbar no tape el botón */
+    .page-hero {
+        padding-top: 130px !important;
+    }
+
+    /* 2. Hacer el botón "Volver a Servicios" más legible y fácil de presionar */
+    .btn-back-services {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        background: rgba(11, 19, 43, 0.85) !important; /* Fondo oscuro sólido para resaltar */
+        border: 1.5px solid #ff6b00 !important; /* Borde naranja claro */
+        border-radius: 8px;
+        margin-top: 5px;
+        margin-bottom: 20px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-back-services i {
+        font-size: 1rem;
+        color: #ff6b00 !important;
+    }
 }
