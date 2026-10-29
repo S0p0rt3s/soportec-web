@@ -324,10 +324,51 @@
 <section class="content-section">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <img src="Imagenes/images/server.jfif"
-                     alt="Rack de servidores en datacenter" class="service-photo">
+            <!-- SLIDER: ¿QUÉ ES? (SERVIDORES - TAMAÑO AJUSTADO A 320PX) -->
+<div class="col-md-6 mb-4 mb-md-0">
+    <div id="servidoresCarousel" class="carousel slide shadow-lg" data-ride="carousel" data-interval="4000" 
+         style="border-radius: 12px; overflow: hidden; background-color: #0f172a; height: 320px;">
+        
+        <!-- Indicadores -->
+        <ol class="carousel-indicators">
+            <li data-target="#servidoresCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#servidoresCarousel" data-slide-to="1"></li>
+            <li data-target="#servidoresCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Imágenes del Slider -->
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img src="Soportec-Imagenes/Fortinet.jpeg" 
+                     class="d-block w-100 h-100" 
+                     alt="Rack de servidores en datacenter" 
+                     style="object-fit: cover;">
             </div>
+            <div class="carousel-item h-100">
+                <img src="Soportec-Imagenes/Unilever-Datacenter.jpeg" 
+                     class="d-block w-100 h-100" 
+                     alt="Infraestructura de servidores" 
+                     style="object-fit: cover;">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="Soportec-Imagenes/Configuracion-Switch.jpeg" 
+                     class="d-block w-100 h-100" 
+                     alt="Monitoreo y administración de servidores" 
+                     style="object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#servidoresCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#servidoresCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
             <div class="col-md-6 pl-md-5">
                 <p class="inner-label">¿Qué es?</p>
                 <h2 class="inner-heading">El corazón de tu infraestructura IT, en buenas manos</h2>
