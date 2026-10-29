@@ -159,10 +159,51 @@
     <section class="content-section alt">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=700&q=80"
-                         alt="Gabinete de red organizado" class="service-photo">
-                </div>
+                <!-- SLIDER 2: BENEFICIOS -->
+<div class="col-md-6 order-md-2 mb-4 mb-md-0">
+    <div id="beneficiosCarousel" class="carousel slide shadow-lg" data-ride="carousel" data-interval="4000" 
+         style="border-radius: 12px; overflow: hidden; background-color: #0f172a; height: 380px;">
+        
+        <!-- Indicadores -->
+        <ol class="carousel-indicators">
+            <li data-target="#beneficiosCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#beneficiosCarousel" data-slide-to="1"></li>
+            <li data-target="#beneficiosCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Contenedor -->
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img src="Soportec-Imagenes/Switch-Instalacion2.jpeg" 
+                     class="d-block w-100 h-100" 
+                     alt="Gabinete de red organizado" 
+                     style="object-fit: cover;">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="Soportec-Imagenes/Rack-Ordenamiento2.jpeg" 
+                     class="d-block w-100 h-100" 
+                     alt="Patch panel y conectores de red" 
+                     style="object-fit: cover;">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="Imagenes/images/cableado.jpg" 
+                     class="d-block w-100 h-100" 
+                     alt="Instalación de rack de comunicaciones" 
+                     style="object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#beneficiosCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#beneficiosCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
                 <div class="col-md-6 order-md-1 pr-md-5">
                     <p class="section-label">Beneficios</p>
                     <h2 class="section-heading">Red limpia, empresa que no se detiene</h2>
@@ -234,7 +275,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex align-items-center">
-                    <img src="Imagenes/images/cableado.jpg"
+                    <img src="Soportec-Imagenes/Cris-Ordenamiento-Cables1.jpeg"
                          alt="Técnico realizando tendido de cable ethernet" class="service-photo" style="height: 420px;">
                 </div>
             </div>
