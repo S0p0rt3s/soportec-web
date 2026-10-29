@@ -70,10 +70,40 @@
     <section class="content-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="Imagenes/images/tendido.jpg"
-                         alt="Rack de servidores con cableado ordenado" class="service-photo">
-                </div>
+                <!-- SLIDER DE IMÁGENES -->
+<div class="col-md-6 mb-4 mb-md-0">
+    <div id="cableadoCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel" data-interval="4000">
+        <!-- Indicadores (puntos inferiores) -->
+        <ol class="carousel-indicators">
+            <li data-target="#cableadoCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#cableadoCarousel" data-slide-to="1"></li>
+            <li data-target="#cableadoCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Imágenes del Slider -->
+        <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+                <img src="Imagenes/cableado.jpeg" class="d-block w-100 service-photo" alt="Técnico realizando instalación de cableado">
+            </div>
+            <div class="carousel-item">
+                <img src="Soportec-Imagenes/Laboratorio-PUCP2.jpeg" class="d-block w-100 service-photo" alt="Rack y gabinete de red organizado">
+            </div>
+            <div class="carousel-item">
+                <img src="Soportec-Imagenes/Rack-Ordenamiento1.jpeg" class="d-block w-100 service-photo" alt="Infraestructura de red empresarial">
+            </div>
+        </div>
+
+        <!-- Flechas de navegación -->
+        <a class="carousel-control-prev" href="#cableadoCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#cableadoCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
                 <div class="col-md-6 pl-md-5">
                     <p class="section-label">¿Qué es?</p>
                     <h2 class="section-heading">La columna vertebral de tu red empresarial</h2>
