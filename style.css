@@ -2652,3 +2652,51 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
         color: #ff6b00 !important;
     }
 }
+
+/* ── Botones CTA Bilingüe (Fuente Orbitron + Efectos Hover) ── */
+.btn-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Botón Lleno (Naranja) */
+.btn-inner-filled {
+    background: var(--orange, #e65100);
+    color: #ffffff !important;
+    border: 1.5px solid var(--orange, #e65100);
+}
+
+.btn-inner-filled:hover {
+    background: #ff5500;
+    border-color: #ff5500;
+    color: #ffffff !important;
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(230, 81, 0, 0.45);
+}
+
+/* Botón Delineado (Blanco/Transparente) */
+.btn-inner-outline {
+    background: transparent;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn-inner-outline:hover {
+    background: #ffffff;
+    color: #0b1e36 !important;
+    border-color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(255, 255, 255, 0.25);
+}
