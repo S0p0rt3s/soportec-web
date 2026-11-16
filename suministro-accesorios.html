@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suministro de Accesorios — SOportec</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4 + FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Estilos de SOportec -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS de apoyo -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#top">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atencion-tickets.html">Soporte por Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#footer">Contacto</a></li>
+                    <li class="nav-item ml-2">
+                        <a href="index.html#cotizar" class="btn-nav-cta">Solicitar Asistencia</a>
+                    </li>
+                    <li class="nav-item ml-2 d-flex align-items-center">
+                        <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+                            <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </section>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html#services" class="btn-back-services mb-4">
+                <i class="fa fa-arrow-left mr-2"></i> Volver a Servicios
+            </a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-tech">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#services">Servicios</a></li>
+                    <li class="breadcrumb-item active">Suministro de Accesorios</li>
+                </ol>
+            </nav>
+            <i class="fa fa-shopping-cart page-icon" style="font-size:3rem; color:#E65C00; margin-bottom:16px; display:block;"></i>
+            <h1 class="page-title">Suministro de Accesorios</h1>
+            <p class="page-subtitle">Venta y provisión de periféricos, hardware tecnológico y consumibles para empresas y hogares. Asesoría personalizada para elegir los equipos que mejor se adaptan a tu presupuesto y necesidades.</p>
+        </div>
+    </section>
+
+    <!-- ¿QUÉ ES? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- COLUMNA IZQUIERDA: IMAGEN -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div style="border-radius: 12px; overflow: hidden; height: 320px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="Imagenes/images/accesorios.jpg.jfif"
+                             alt="Accesorios y periféricos tecnológicos"
+                             class="w-100" style="height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: TEXTO -->
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Qué ofrecemos?</p>
+                    <h2 class="section-heading">El hardware correcto para cada necesidad</h2>
+                    <p class="section-text">
+                        No todos los periféricos son iguales. En SOportec te ayudamos a elegir, adquirir e instalar los accesorios tecnológicos ideales para tu entorno de trabajo, ya sea una oficina corporativa o un hogar conectado.
+                    </p>
+                    <p class="section-text">
+                        Desde teclados y monitores hasta switches, cámaras web, headsets y consumibles de impresión — contamos con una red de proveedores confiables que nos permite ofrecerte calidad garantizada y precios competitivos, con asesoría incluida en cada compra.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">B2B</div>
+                        <div class="stat-label">Empresas y Corporativos</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">B2C</div>
+                        <div class="stat-label">Hogares y Personas</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Productos Originales</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">+50</div>
+                        <div class="stat-label">Marcas Disponibles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">Catálogo</p>
+                    <h2 class="section-heading">¿Qué accesorios y hardware suministramos?</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-desktop" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Periféricos de Escritorio</h4>
+                        <p>Teclados, ratones, monitores, webcams, auriculares y headsets para trabajo presencial y remoto. Marcas como Logitech, HP, Dell y más.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-print" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Consumibles de Impresión</h4>
+                        <p>Tóner, cartuchos de tinta, papel bond y etiquetas compatibles con impresoras HP, Epson, Canon y Brother. Garantizamos compatibilidad.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-hdd-o" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Almacenamiento y Memoria</h4>
+                        <p>Discos SSD, discos duros externos, memorias RAM y pendrives USB de alta velocidad. Upgrade de hardware incluido si lo necesitas.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-plug" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Cables y Conectividad</h4>
+                        <p>Cables HDMI, DisplayPort, USB-C, patch cords Cat6, adaptadores y hubs multipuerto para tu escritorio o sala de servidores.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-shield" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>UPS y Protección Eléctrica</h4>
+                        <p>Fuentes de poder ininterrumpida (UPS), reguladores de voltaje y regletas con protección de picos para tu equipamiento crítico.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-wifi" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Equipos de Red</h4>
+                        <p>Switches, access points, routers y repetidores Wi-Fi para redes domésticas y empresariales. Instalación y configuración incluida.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div style="border-radius: 12px; overflow: hidden; height: 350px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=700&q=80"
+                             alt="Accesorios de tecnología empresarial"
+                             class="w-100" style="height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                </div>
+
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Por qué con SOportec?</p>
+                    <h2 class="section-heading">Asesoría real, no solo venta</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Asesoría personalizada sin costo</strong> — te ayudamos a elegir el accesorio correcto según tu uso, presupuesto y compatibilidad.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Productos originales garantizados</strong> — trabajamos solo con distribuidores autorizados para asegurar calidad y garantía de fábrica.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Instalación y configuración incluida</strong> — no solo te entregamos el producto, lo instalamos y dejamos funcionando en tu equipo.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Gestión de compras corporativas</strong> — para empresas con múltiples sedes o equipos, manejamos pedidos en volumen con soporte técnico incluido.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Entrega en Lima Metropolitana</strong> — llevamos el producto a tu oficina u hogar sin costos adicionales dentro de nuestras zonas de atención.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <p class="section-label">Cómo lo hacemos</p>
+                    <h2 class="section-heading">De la consulta a la entrega en tu puerta</h2>
+
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h5>Consulta y Diagnóstico de Necesidades</h5>
+                            <p>Nos cuentas qué equipo tienes, para qué lo usas y cuánto tienes de presupuesto. Te recomendamos las opciones más adecuadas.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h5>Cotización y Confirmación</h5>
+                            <p>Preparamos una cotización detallada con marca, modelo, precio y tiempo de entrega. Sin compromisos hasta que apruebes.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h5>Adquisición y Verificación</h5>
+                            <p>Gestionamos la compra con nuestros distribuidores y verificamos que el producto llegue en perfectas condiciones antes de entregarlo.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h5>Entrega e Instalación</h5>
+                            <p>Entregamos en tu ubicación e instalamos el accesorio o hardware. Te explicamos su uso y configuración básica para que aproveches al máximo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&q=80"
+                         alt="Entrega de hardware tecnológico" class="service-photo" style="height: 420px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿PARA QUIÉN? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">¿Para quién es?</p>
+                    <h2 class="section-heading">Soluciones para todo tipo de cliente</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-building" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Empresas y Startups</h4>
+                        <p>Equipamiento completo para oficinas en crecimiento: periféricos, consumibles y hardware de red gestionado en un solo proveedor de confianza.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-home" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Uso Doméstico</h4>
+                        <p>Mejora tu espacio de trabajo en casa con los accesorios correctos: desde un buen headset para videollamadas hasta un monitor externo ergonómico.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-graduation-cap" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Instituciones Educativas</h4>
+                        <p>Provisión de consumibles, cámaras, proyectores y hardware para aulas equipadas. Gestión de pedidos recurrentes sin complicaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Necesitas accesorios o hardware para tu empresa u hogar?</h2>
+            <p>Contáctanos y te asesoramos sin compromiso. Conseguimos el producto correcto al precio justo.</p>
+            <div class="d-flex flex-wrap justify-content-center" style="gap:16px;">
+                <a href="index.html#cotizar" class="btn-inner btn-inner-filled">
+                    <i class="fa fa-envelope"></i> SOLICITAR COTIZACIÓN
+                </a>
+                <a href="https://wa.me/51974985007" target="_blank" rel="noopener" class="btn-inner btn-inner-outline">
+                    <i class="fa fa-whatsapp"></i> CHATEAR POR WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo + descripción -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png"
+                             alt="SOportec" class="footer-logo">
+                        <p class="footer-desc">
+                            Servicios e integraciones TI profesionales para empresas y hogares en Lima Metropolitana.
+                            Tecnología confiable, soporte humano.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"  class="social-link"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-link"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"  class="social-link"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://wa.me/51974985007" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Servicios</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="atencion-tickets.html">Tickets Helpdesk</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="cableado-estructurado.html">Cableado Estructurado</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Redes y Conectividad</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="soporte-bilingue.html">Soporte Bilingüe</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="visitas-tecnicas.html">Visitas Técnicas</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="suministro-accesorios.html">Suministro de Accesorios</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="formateo-equipos.html">Formateo de Equipos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Zonas -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Zonas de Atención</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Santiago de Surco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Barranco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Isidro</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Miraflores</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Luis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Contáctanos</p>
+                        <div class="contact-info-list">
+                            <div class="contact-item">
+                                <i class="fa fa-map-marker"></i>
+                                <span>San Luis, Lima — Perú</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:+51974985007">+51 974 985 007</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-whatsapp"></i>
+                                <a href="https://wa.me/51974985007" target="_blank" rel="noopener">WhatsApp Directo</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-envelope-o"></i>
+                                <a href="mailto:cristianjbr755@gmail.com">cristianjbr755@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <p class="copyright mb-0">© 2026 SOportec. Todos los derechos reservados.</p>
+                    <p class="copyright mb-0">Diseñado y desarrollado por SOportec</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll To Top -->
+    <a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Google Translate (oculto) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script src="script.js"></script>
+
+    <!-- Google Translate API -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        try {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es',
+                autoDisplay: false
+            }, 'google_translate_element');
+        } catch (e) {
+            console.error('Error al inicializar Google Translate:', e);
+        }
+    }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>
