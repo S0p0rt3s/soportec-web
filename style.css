@@ -2987,3 +2987,19 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
     .brand-logo-name  { font-size: 1.4rem; }
     .brand-product-name { font-size: 1.05rem; }
 }
+
+/* Switch SVG illustrations */
+.brand-image-svg {
+    background: #0a0a0a !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.switch-svg {
+    width: 100%;
+    height: auto;
+    max-width: 540px;
+    filter: drop-shadow(0 4px 16px rgba(0,0,0,0.6));
+}
