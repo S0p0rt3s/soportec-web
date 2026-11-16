@@ -1732,20 +1732,20 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
 .footer-top { padding: 70px 0 48px; }
 
 .footer-logo {
-    height: 90px;
+    height: 130px;
     width: auto;
     margin-bottom: 18px;
 }
 
 /* Tablet */
 @media (max-width: 991px) {
-    .footer-logo { height: 75px; }
+    .footer-logo { height: 115px; }
 }
 
 /* Móvil */
 @media (max-width: 767px) {
     .footer-logo {
-        height: 80px;
+        height: 120px;
         margin-left: auto;
         margin-right: auto;
     }
