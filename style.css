@@ -2829,3 +2829,161 @@ textarea.input-tech { resize: vertical; min-height: 100px; }
 .flip-card-front .glass-card-footer {
     border-top-color: rgba(255,255,255,0.15) !important;
 }
+
+/* ================================================================
+   PASARELA DE MARCAS DE SWITCHES — redes-conectividad.html
+================================================================ */
+.brands-carousel-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 56px 0 40px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.brands-carousel-label {
+    color: var(--neon-cyan, #00d4ff);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+/* Slide layout */
+.brand-slide {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 60px 40px;
+}
+
+.brand-image-wrap {
+    flex: 0 0 420px;
+    height: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.brand-switch-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item.active .brand-switch-img {
+    transform: scale(1.03);
+}
+
+/* Brand info */
+.brand-info {
+    flex: 1;
+}
+
+.brand-logo-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.brand-cisco   { color: #1ba0d7; }
+.brand-aruba   { color: #ff8300; }
+.brand-huawei  { color: #cf0a2c; }
+.brand-forti   { color: #ee3124; }
+
+.brand-product-name {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.brand-product-desc {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.brand-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.brand-tag {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+}
+
+/* Indicators */
+.brands-indicators {
+    bottom: 8px;
+}
+
+.brands-indicators li {
+    background-color: rgba(255,255,255,0.3);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+}
+
+.brands-indicators li.active {
+    background-color: var(--orange, #E65C00);
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Arrow controls */
+.brands-control {
+    width: 44px;
+}
+
+.brands-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(230, 92, 0, 0.75);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.brands-control:hover .brands-arrow {
+    background: var(--orange, #E65C00);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .brand-slide {
+        flex-direction: column;
+        padding: 0 20px 40px;
+        gap: 24px;
+    }
+    .brand-image-wrap {
+        flex: none;
+        width: 100%;
+        height: 220px;
+    }
+    .brand-logo-name { font-size: 1.7rem; }
+}
+
+@media (max-width: 575px) {
+    .brand-image-wrap { height: 180px; }
+    .brand-logo-name  { font-size: 1.4rem; }
+    .brand-product-name { font-size: 1.05rem; }
+}

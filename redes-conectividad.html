@@ -104,35 +104,118 @@
         </div>
     </section>
 
-    <!-- STATS -->
-    <div class="stats-row">
+    <!-- PASARELA DE MARCAS DE SWITCHES -->
+    <div class="brands-carousel-section">
         <div class="container">
-            <div class="row">
-                <div class="col-6 col-md-3">
-                    <div class="stat-item">
-                        <div class="stat-number">Cisco</div>
-                        <div class="stat-label">Switches y Routers</div>
+            <p class="text-center brands-carousel-label">Marcas con las que trabajamos</p>
+
+            <div id="switchBrandsCarousel" class="carousel slide" data-ride="carousel" data-interval="2800">
+
+                <!-- Indicadores -->
+                <ol class="carousel-indicators brands-indicators">
+                    <li data-target="#switchBrandsCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#switchBrandsCarousel" data-slide-to="1"></li>
+                    <li data-target="#switchBrandsCarousel" data-slide-to="2"></li>
+                    <li data-target="#switchBrandsCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1: Cisco -->
+                    <div class="carousel-item active">
+                        <div class="brand-slide">
+                            <div class="brand-image-wrap">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Cisco_Catalyst_702x_702x.jpg/640px-Cisco_Catalyst_702x_702x.jpg"
+                                     alt="Cisco Catalyst Switch" class="brand-switch-img">
+                            </div>
+                            <div class="brand-info">
+                                <div class="brand-logo-name brand-cisco">Cisco</div>
+                                <h4 class="brand-product-name">Cisco Catalyst Series</h4>
+                                <p class="brand-product-desc">Switches administrables de nivel enterprise para entornos de campus, sucursales y centros de datos. Alta disponibilidad, seguridad integrada y soporte PoE+.</p>
+                                <div class="brand-tags">
+                                    <span class="brand-tag">Catalyst 9000</span>
+                                    <span class="brand-tag">SG350 / SG500</span>
+                                    <span class="brand-tag">PoE+</span>
+                                    <span class="brand-tag">Stacking</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-item">
-                        <div class="stat-number">Aruba</div>
-                        <div class="stat-label">WiFi Empresarial</div>
+
+                    <!-- Slide 2: Aruba (HPE) -->
+                    <div class="carousel-item">
+                        <div class="brand-slide">
+                            <div class="brand-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=80"
+                                     alt="Aruba HPE Network Switch" class="brand-switch-img">
+                            </div>
+                            <div class="brand-info">
+                                <div class="brand-logo-name brand-aruba">Aruba</div>
+                                <h4 class="brand-product-name">HPE Aruba CX Series</h4>
+                                <p class="brand-product-desc">Switches inteligentes con sistema operativo AOS-CX cloud-native. Gestión centralizada, automatización de red y visibilidad en tiempo real para entornos empresariales modernos.</p>
+                                <div class="brand-tags">
+                                    <span class="brand-tag">CX 6300</span>
+                                    <span class="brand-tag">CX 8360</span>
+                                    <span class="brand-tag">AOS-CX</span>
+                                    <span class="brand-tag">Aruba Central</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-item">
-                        <div class="stat-number">VLAN</div>
-                        <div class="stat-label">Segmentación de Red</div>
+
+                    <!-- Slide 3: Huawei -->
+                    <div class="carousel-item">
+                        <div class="brand-slide">
+                            <div class="brand-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=700&q=80"
+                                     alt="Huawei CloudEngine Switch" class="brand-switch-img">
+                            </div>
+                            <div class="brand-info">
+                                <div class="brand-logo-name brand-huawei">Huawei</div>
+                                <h4 class="brand-product-name">Huawei CloudEngine Series</h4>
+                                <p class="brand-product-desc">Switches de alto rendimiento para redes de campus y data center. Arquitectura flexible con soporte para SDN, telemetría y gestión vía iMaster NCE.</p>
+                                <div class="brand-tags">
+                                    <span class="brand-tag">S5735</span>
+                                    <span class="brand-tag">CloudEngine</span>
+                                    <span class="brand-tag">SDN</span>
+                                    <span class="brand-tag">iMaster NCE</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Monitoreo de Red</div>
+
+                    <!-- Slide 4: Fortinet FortiSwitch -->
+                    <div class="carousel-item">
+                        <div class="brand-slide">
+                            <div class="brand-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=700&q=80"
+                                     alt="FortiSwitch Fortinet" class="brand-switch-img">
+                            </div>
+                            <div class="brand-info">
+                                <div class="brand-logo-name brand-forti">FortiSwitch</div>
+                                <h4 class="brand-product-name">Fortinet FortiSwitch Series</h4>
+                                <p class="brand-product-desc">Switches de acceso seguros gestionados directamente desde FortiGate. Integración nativa con Security Fabric para control de acceso, visibilidad y protección de endpoints en la red LAN.</p>
+                                <div class="brand-tags">
+                                    <span class="brand-tag">FS-108F</span>
+                                    <span class="brand-tag">FS-448E</span>
+                                    <span class="brand-tag">Security Fabric</span>
+                                    <span class="brand-tag">FortiLink</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                </div><!-- /.carousel-inner -->
+
+                <!-- Controles -->
+                <a class="carousel-control-prev brands-control" href="#switchBrandsCarousel" role="button" data-slide="prev">
+                    <span class="brands-arrow"><i class="fa fa-chevron-left"></i></span>
+                </a>
+                <a class="carousel-control-next brands-control" href="#switchBrandsCarousel" role="button" data-slide="next">
+                    <span class="brands-arrow"><i class="fa fa-chevron-right"></i></span>
+                </a>
+
+            </div><!-- /.carousel -->
         </div>
     </div>
 
