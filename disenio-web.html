@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Páginas Web — SOportec</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4 + FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Estilos de SOportec -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS de apoyo -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/images/Soportec-New-Logo-removebg-preview.png" alt="SOportec Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#top">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about-us">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atencion-tickets.html">Soporte por Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#footer">Contacto</a></li>
+                    <li class="nav-item ml-2">
+                        <a href="index.html#cotizar" class="btn-nav-cta">Solicitar Asistencia</a>
+                    </li>
+                    <li class="nav-item ml-2 d-flex align-items-center">
+                        <button id="langToggle" onclick="toggleLang()" class="lang-btn">
+                            <span id="langFlag">🇺🇸</span> <span id="langLabel">EN</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </section>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html#services" class="btn-back-services mb-4">
+                <i class="fa fa-arrow-left mr-2"></i> Volver a Servicios
+            </a>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-tech">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#services">Servicios</a></li>
+                    <li class="breadcrumb-item active">Diseño de Páginas Web</li>
+                </ol>
+            </nav>
+            <i class="fa fa-globe page-icon" style="font-size:3rem; color:#E65C00; margin-bottom:16px; display:block;"></i>
+            <h1 class="page-title">Diseño de Páginas Web</h1>
+            <p class="page-subtitle">Desarrollo de sitios web a medida, responsivos y optimizados. Interfaces modernas e interactivas que impulsan la presencia digital de tu negocio y convierten visitas en clientes.</p>
+        </div>
+    </section>
+
+    <!-- ¿QUÉ ES? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- COLUMNA IZQUIERDA: IMAGEN -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div style="border-radius: 12px; overflow: hidden; height: 320px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="Soportec-Imagenes/Desarrollador.jpg"
+                             alt="Desarrollador web trabajando"
+                             class="w-100" style="height: 100%; object-fit: cover; object-position: center top;">
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: TEXTO -->
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Qué ofrecemos?</p>
+                    <h2 class="section-heading">Tu presencia digital, construida a medida</h2>
+                    <p class="section-text">
+                        En SOportec diseñamos y desarrollamos sitios web profesionales desde cero, adaptados a la identidad de tu marca y optimizados para funcionar perfectamente en cualquier dispositivo: computadora, tablet o celular.
+                    </p>
+                    <p class="section-text">
+                        No usamos plantillas genéricas. Cada proyecto es único: analizamos tus objetivos, tu público y tu competencia para crear una web que no solo se vea bien, sino que genere resultados concretos para tu negocio.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Responsivo y Mobile-First</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">SEO</div>
+                        <div class="stat-label">Optimizado para Google</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">&lt;3s</div>
+                        <div class="stat-label">Tiempo de Carga</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">SSL</div>
+                        <div class="stat-label">Certificado de Seguridad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICIOS WEB -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">¿Qué desarrollamos?</p>
+                    <h2 class="section-heading">Soluciones web para cada tipo de negocio</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-briefcase" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Web Corporativa</h4>
+                        <p>Sitio institucional profesional para presentar tu empresa, servicios y equipo. Diseño formal, moderno y alineado con tu identidad de marca.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-shopping-bag" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Landing Pages</h4>
+                        <p>Páginas de aterrizaje de alta conversión para campañas de marketing, lanzamientos de productos o captación de leads con formularios integrados.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-mobile" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Diseño Responsivo</h4>
+                        <p>Adaptación perfecta a cualquier pantalla: móvil, tablet y escritorio. Tu web se verá y funcionará impecablemente en todos los dispositivos.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-search" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Optimización SEO</h4>
+                        <p>Estructura de código limpia, velocidad de carga optimizada, metaetiquetas y configuración para posicionarte mejor en los resultados de Google.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-paint-brush" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>UI / UX Personalizado</h4>
+                        <p>Diseño de interfaces intuitivas y atractivas centradas en la experiencia del usuario. Cada elemento tiene un propósito claro y guía al visitante hacia la acción.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-wrench" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Mantenimiento Web</h4>
+                        <p>Actualizaciones de contenido, corrección de errores, renovación de certificados SSL y soporte técnico continuo para mantener tu web siempre activa.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div style="border-radius: 12px; overflow: hidden; height: 380px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&q=80"
+                             alt="Diseño web moderno en múltiples dispositivos"
+                             class="w-100" style="height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                </div>
+
+                <div class="col-md-6 pl-md-5">
+                    <p class="section-label">¿Por qué con SOportec?</p>
+                    <h2 class="section-heading">Tecnología que trabaja para tu negocio</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Diseño 100% a medida</strong> — no usamos plantillas. Tu web es única, construida desde cero según tu marca y objetivos.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Mobile-first y responsivo</strong> — más del 70% del tráfico web es móvil. Tu sitio estará optimizado para ese público desde el principio.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Velocidad y rendimiento</strong> — código limpio, imágenes optimizadas y hosting configurado para tiempos de carga por debajo de 3 segundos.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Integración con WhatsApp y redes</strong> — botones de contacto directo, formularios y conexión con tus canales digitales ya activos.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Entrega con capacitación incluida</strong> — te explicamos cómo actualizar contenidos básicos para que no dependas de nosotros para cada cambio.</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-check-circle"></i></span>
+                            <span><strong>Soporte post-lanzamiento</strong> — acompañamiento técnico durante el primer mes para resolver cualquier ajuste o imprevisto.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <p class="section-label">Cómo lo hacemos</p>
+                    <h2 class="section-heading">De la idea a tu web publicada en 4 pasos</h2>
+
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h5>Briefing y Análisis</h5>
+                            <p>Conversamos sobre tu negocio, público objetivo, competidores y lo que esperas de tu web. Definimos estructura, páginas y funcionalidades necesarias.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h5>Diseño y Prototipo</h5>
+                            <p>Diseñamos la maqueta visual de tu web con paleta de colores, tipografías y disposición de elementos. Tú apruebas antes de que escribamos una sola línea de código.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h5>Desarrollo y Contenido</h5>
+                            <p>Construimos la web con código optimizado, integramos tu contenido (textos, imágenes, formularios) y verificamos el funcionamiento en todos los dispositivos.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h5>Publicación y Capacitación</h5>
+                            <p>Subimos tu web al hosting, configuramos el dominio y el SSL, y te explicamos cómo gestionar tu sitio. Entrega con soporte técnico incluido el primer mes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=700&q=80"
+                         alt="Proceso de diseño web" class="service-photo" style="height: 420px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿PARA QUIÉN? -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8">
+                    <p class="section-label">¿Para quién es?</p>
+                    <h2 class="section-heading">Ideal para negocios que quieren crecer en digital</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-building" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Empresas y PYMEs</h4>
+                        <p>Negocios que quieren proyectar una imagen profesional, generar confianza en sus clientes y tener presencia digital consolidada frente a la competencia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-user" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Profesionales Independientes</h4>
+                        <p>Consultores, médicos, abogados, diseñadores y freelancers que necesitan un portafolio o web de servicios para captar clientes online.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="services text-center">
+                        <i class="fa fa-rocket" style="font-size:2rem; color:var(--orange); margin-bottom:16px; display:block;"></i>
+                        <h4>Emprendimientos Nuevos</h4>
+                        <p>Startups y negocios en lanzamiento que necesitan establecer su marca digital desde el primer día con una web rápida, moderna y orientada a conversión.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para tener la web que tu negocio merece?</h2>
+            <p>Cuéntanos tu proyecto y te damos una propuesta personalizada sin compromiso.</p>
+            <div class="d-flex flex-wrap justify-content-center" style="gap:16px;">
+                <a href="index.html#cotizar" class="btn-inner btn-inner-filled">
+                    <i class="fa fa-envelope"></i> SOLICITAR PROPUESTA
+                </a>
+                <a href="https://wa.me/51974985007" target="_blank" rel="noopener" class="btn-inner btn-inner-outline">
+                    <i class="fa fa-whatsapp"></i> CHATEAR POR WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo + descripción -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <img src="Imagenes/images/soportec_logo_sin_fondo_canvas_original.png"
+                             alt="SOportec" class="footer-logo">
+                        <p class="footer-desc">
+                            Servicios e integraciones TI profesionales para empresas y hogares en Lima Metropolitana.
+                            Tecnología confiable, soporte humano.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"  class="social-link"><i class="fa fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-link"><i class="fa fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"  class="social-link"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://wa.me/51974985007" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicios -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Servicios</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="atencion-tickets.html">Tickets Helpdesk</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="cableado-estructurado.html">Cableado Estructurado</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="index.html#services">Redes y Conectividad</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="soporte-bilingue.html">Soporte Bilingüe</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="visitas-tecnicas.html">Visitas Técnicas</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="suministro-accesorios.html">Suministro de Accesorios</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="disenio-web.html">Diseño Web</a></li>
+                            <li><i class="fa fa-arrow-right mr-1" style="color:var(--orange)"></i><a href="formateo-equipos.html">Formateo de Equipos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Zonas -->
+                    <div class="col-lg-2 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Zonas de Atención</p>
+                        <ul class="footer-links">
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Santiago de Surco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Barranco</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Isidro</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> Miraflores</li>
+                            <li><i class="fa fa-map-marker mr-1" style="color:var(--orange)"></i> San Luis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="col-lg-4 col-md-6 footer-box mb-4">
+                        <p class="footer-heading">Contáctanos</p>
+                        <div class="contact-info-list">
+                            <div class="contact-item">
+                                <i class="fa fa-map-marker"></i>
+                                <span>San Luis, Lima — Perú</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:+51974985007">+51 974 985 007</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-whatsapp"></i>
+                                <a href="https://wa.me/51974985007" target="_blank" rel="noopener">WhatsApp Directo</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-envelope-o"></i>
+                                <a href="mailto:cristianjbr755@gmail.com">cristianjbr755@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <p class="copyright mb-0">© 2026 SOportec. Todos los derechos reservados.</p>
+                    <p class="copyright mb-0">Diseñado y desarrollado por SOportec</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll To Top -->
+    <a href="#" id="scrollTop" aria-label="Volver arriba"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Google Translate (oculto) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script src="script.js"></script>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        try {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es',
+                autoDisplay: false
+            }, 'google_translate_element');
+        } catch (e) {
+            console.error('Error al inicializar Google Translate:', e);
+        }
+    }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+</body>
+</html>
